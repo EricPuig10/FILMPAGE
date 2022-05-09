@@ -15,7 +15,7 @@ export class MovieList extends Component {
                 {
                     id: 2,
                     imgUrl:"http://1.bp.blogspot.com/-NtRTeSqmbTQ/UczKvMeQ79I/AAAAAAAAC3Q/ir70hx5h9vc/s1600/image.jpeg",
-                    title: "InTime",
+                    title: "In Time",
                     yearOfProd: "2011",
                     fav: <i className="fa-solid fa-star fa-lg"></i>,
                 },
@@ -43,7 +43,7 @@ export class MovieList extends Component {
                 {
                     id: 2,
                     imgUrl:"http://1.bp.blogspot.com/-NtRTeSqmbTQ/UczKvMeQ79I/AAAAAAAAC3Q/ir70hx5h9vc/s1600/image.jpeg",
-                    title: "InTime",
+                    title: "In Time",
                     yearOfProd: "2011",
                     fav: <i className="fa-solid fa-star fa-lg"></i>,
                 },
