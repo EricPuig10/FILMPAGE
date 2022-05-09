@@ -24,11 +24,47 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+
+    <title>FILM HUB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/13bfd11a9a.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <nav>
+      <div class="navBar">
+          <div class="title">
+              <h1>FILM<span class="hub">HUB</span></h1>
+          </div>
+  
+          <div class="navButtons">
+              <button class="navBut">Home   <i class="fa-solid fa-caret-down fa-xs"></i></button>
+              <button class="navBut">Catalog   <i class="fa-solid fa-caret-down fa-xs"></i></button>
+          </div>
+
+          <div class="inputCont">
+              <input class="searchFilm" placeholder="Search..." type="text">
+          </div>
+
+          <div class="userZone">
+              <button class="logInBut">Log In</button>
+          </div>
+      </div>      
+  </nav>
+
+  <div class="trendingFilms">
+      <img class="imgTrendingFilm" src="https://m.media-amazon.com/images/S/sonata-images-prod/ES_TVOD_GO_Uncharted_EST/b145cb29-434b-4536-8aff-34c54f5f3ed3._UR3000,600_SX1500_FMwebp_.jpeg"> 
+      <button class="butLeft"><i class="fa-solid fa-angle-left fa-2xl"></i></button>
+      <button class="butRight"><i class="fa-solid fa-angle-right fa-2xl   "></i></button>
+  </div>
+
+  <main>
+        <div id="root"></div>
+  </main>
+
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
