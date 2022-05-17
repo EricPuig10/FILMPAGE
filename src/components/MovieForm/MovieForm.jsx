@@ -3,17 +3,11 @@ import {Component} from "react";
 export class MovieForm extends Component{
     constructor(props){
         super(props);
-        console.log(this.props.movieToEdit)
+        
         this.state = {
             showPreview:false,
-            newMovie: {
-                id: Math.floor(Math.random() * 100),
-                title:"",
-                yearOfProd:"",
-                imgUrl: "",
-                fav: <i className="fa-solid fa-star fa-lg"></i>,
-    
-            },
+            newMovie: this.props.movieToEdit,
+            isEditMode: this.props.isEditMode,
         };
     }
 
@@ -21,9 +15,12 @@ export class MovieForm extends Component{
 
     onSubmitHandler = (e) => {
     e.preventDefault();
-    
+
     if (this.state.newMovie.title.length > 0){
-        this.props.addNewMovie(this.state.newMovie);
+        !this.state.isEditMode ? 
+        this.props.addNewMovie(this.state.newMovie) 
+        :
+        this.props.updateMovie(this.state.newMovie)
     }
     
     this.resetInputsForm(e);
@@ -39,20 +36,17 @@ export class MovieForm extends Component{
 
     onInputChange = (e) => {
         const name = e.target.name;
-        
-
         const value = e.target.value;
-        
-
         this.setState({newMovie: {...this.state.newMovie, [name]:value}});
-    };
-
-    showPreview = () => {
-        if(this.state.newMovie.imgUrl.length > 0) this.setState({showPreview:true})
-        else this.setState({showPreview:false});
 
     };
 
+    // showPreview = () => {
+    //     if(this.state.newMovie.imgUrl.length > 0) this.setState({showPreview:true})
+    //     else this.setState({showPreview:false});
+
+    // };
+    
     
     render(){
 
@@ -65,7 +59,10 @@ export class MovieForm extends Component{
                     <input onChange={this.onInputChange} value={this.state.newMovie.title} name="title" id="inputMovieTitle" type="text" placeholder="Title..."></input>
                     <div className="yearAndSubmitCont">
                         <input onChange={this.onInputChange} value={this.state.newMovie.yearOfProd} name="yearOfProd" id="inputMovieYear" type="text" pattern="[0-9]{4}" placeholder="YearOfProd..."></input>
-                        <button type="submit" className="submitBtn" ><i className="fa-solid fa-paper-plane fa-xl"></i></button>
+                        {this.state.isEditMode? 
+                        <button type="submit" className="submitBtn" >Edit<i className="fa-solid fa-paper-plane fa-xl"></i></button>
+                        :<button type="submit" className="submitBtn" ><i className="fa-solid fa-paper-plane fa-xl"></i></button>
+                        }
                     </div>
                 </div>
                 

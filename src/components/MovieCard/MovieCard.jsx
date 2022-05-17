@@ -15,7 +15,7 @@ export class MovieCard extends Component {
         
         <div className="infoFilm">
             <h2 className="titleFilm">{movie.title}</h2>
-            <button className="butFav" >{movie.fav}</button>
+            <button className="butFav"><i className="fa-solid fa-star fa-lg"></i> </button>
             <button className="butEdit" onClick={()=>this.props.editMovie(movie.id)}>  <i className="fa-solid fa-pen-to-square fa-lg"></i></button>     
             <button onClick={() => this.props.deleteMovie(movie.id)} className="deleteBtn"><i className="fa-solid fa-trash-can fa-lg"></i></button>
         </div>

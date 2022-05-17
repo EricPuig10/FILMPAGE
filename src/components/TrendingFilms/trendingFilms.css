@@ -51,10 +51,10 @@ color: white;
     
     .butLeft{
     position: absolute;
-    top:45%;
+    top:43%;
     background-color: transparent;
     border: none;
-    left: 1%;
+    left: 3%;
     color: white;
     }
     
@@ -64,10 +64,10 @@ color: white;
     
     .butRight{
         position: absolute;
-        top:45%;
+        top:43%;
         background-color: transparent;
         border: none;
-        right: 10%;
+        right: 3%;
         color: white;
         }
     
