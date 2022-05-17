@@ -1,0 +1,133 @@
+
+.inputsCont{
+    width:70%;
+    flex-direction: column;
+    margin-left: 2.3%;
+    display: flex;
+
+}
+
+
+.addMovieTitle{
+    border: none;
+    background-color: rgb(24, 23, 23);
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 1.2vw;
+    margin-left: 10%;
+
+}
+
+.addMovieTitle:hover{
+    background-color: rgb(15, 14, 14);
+    border-style: solid;
+    border-color: orange;   
+}
+
+
+#inputMovieUrl{
+    padding: 1%;
+    background-color: rgb(24, 23, 23);
+    padding: 1.5%;
+    border-radius: 1vw;
+    border-style: solid;
+    border-color: white;
+    font-size: 0.9em;
+    width: 60%;
+    color:white;
+    margin-bottom: 2%;
+}
+
+#inputMovieUrl:hover{
+    border-color: orange;
+
+}
+#inputMovieTitle{
+    padding: 1%;
+    background-color: rgb(24, 23, 23);
+    padding: 1.5%;
+    border-radius: 1vw;
+    border-style: solid;
+    border-color: white;
+    font-size: 0.9em;
+    width: 60%;
+    color:white;
+    margin-bottom: 2%;
+
+}
+
+#inputMovieTitle:hover{
+    border-color: orange;
+
+}
+
+
+#inputMovieYear{
+    padding: 1%;
+    background-color: rgb(24, 23, 23);
+    padding: 1.5%;
+    border-radius: 1vw;
+    border-style: solid;
+    border-color: white;
+    font-size: 0.9em;
+    width: 30%;
+    color:white;
+    margin-bottom: 2%;
+
+}
+#inputMovieYear:hover{
+    border-color: orange;
+
+    
+}
+
+
+.submitBtn{
+    background-color: transparent;
+    color: white;
+    width:10%;
+    border: none;
+    padding-top:2%;
+    padding-bottom:2%;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-left: 38%;
+    margin-top: -10%;
+    margin-bottom: 1%;
+    border-radius: 50%;
+}
+
+
+
+.formCont{
+    width:50%;
+    display: flex;
+    border-style: solid;
+    border-color: orange;
+    padding:2%;
+    border-radius: 2vw;
+}
+
+.preview{
+    border-color: rgb(255, 166, 0);
+    border-style: solid;
+    border-radius: 2vw;
+    margin-left: 0%;
+    margin-bottom: 1%;
+    width:15%;
+    background-color: transparent;
+}
+
+.preview img {
+    width:100%;
+    height:100%;
+    border-radius: 2vw;
+    
+}
+
+

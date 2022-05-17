@@ -1,0 +1,11 @@
+
+@import url(./MovieCard/filmCard.css);
+@import url(./NavBar/navBar.css);
+@import url(./TrendingFilms/trendingFilms.css);
+@import url(./MovieForm/AddMovieForm.css);
+
+body{
+    margin: 0;
+    background-color:rgb(24, 23, 23);
+    font-family: 'Jost', sans-serif;
+}

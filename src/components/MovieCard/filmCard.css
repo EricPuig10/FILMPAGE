@@ -17,12 +17,15 @@
 }
 .photoFilmCont{
     border-style: solid;
-    position: relative;
     height:90%;
+    position: relative;
+    
 }
 .photoFilm{
     width:100%;
     height: 100%;
+    
+   
 }
 
 .yearOfProduction{
@@ -54,6 +57,40 @@
     background-color: transparent;
     border: none;
 }
+.butFav:active{
+    color: rgb(255, 242, 0);
+    background-color: transparent;
+    border: none;
+}
+
+.butFav:hover{
+    color: rgb(255, 242, 0);
+    background-color: transparent;
+    border: none;
+}
+.deleteBtn{
+    color:white;
+    background-color: transparent;
+    border:none;
+    margin-right: 2%;    
+}
+.deleteBtn:hover{
+    color:rgb(142, 0, 0);
+    background-color: transparent;
+    border:none;
+    margin-right: 2%;    
+}
+.butEdit{
+    color:white;
+    background-color: transparent;
+    border:none;    
+}
+.butEdit:hover{
+    color:rgb(253, 177, 0);
+    background-color: transparent;
+    border:none;  
+}
+
 
 @media only screen and (max-width: 450px) {
     #containerListFilms{
@@ -74,7 +111,7 @@
     }
     .photoFilmCont{
         position: relative;
-        height:90%;
+        height:100%;
     }
     .photoFilm{
         width:100%;
@@ -109,6 +146,22 @@
         color: white;
         background-color: transparent;
         border: none;
+    }
+    .butDelete{
+        color:white;
+        background-color: transparent;
+        border:none;
+        margin-right: 10%;    
+    }
+    .butEdit{
+        color:white;
+        background-color: transparent;
+        border:none;    
+    }
+    .butEdit:hover{
+        color:rgb(253, 177, 0);
+        background-color: transparent;
+        border:none;  
     }
 
 }

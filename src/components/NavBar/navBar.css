@@ -21,6 +21,7 @@
     background-color: rgb(24, 23, 23);
     display: flex;
     justify-content: space-around;
+    margin-left: -20%;
 }
 
 .navBut{
@@ -43,6 +44,8 @@
     border-color: orange;   
 }
 
+
+
 .inputCont{
     width: 35%;
     margin-left: 10%;
@@ -55,6 +58,7 @@
     border-style: solid;
     font-size: 0.9em;
     width: 60%;
+    color:white;
 }
 
 .userZone{
@@ -83,6 +87,8 @@
     width:85%;
     font-size: 1.2em;
 }
+
+
 
 
 @media only screen and (max-width: 450px) {
