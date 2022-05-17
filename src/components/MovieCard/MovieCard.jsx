@@ -1,9 +1,9 @@
 import { Component } from "react";
 
 export class MovieCard extends Component {
-    constructor(props){
-        super(props);
-    }
+    // constructor(props){
+    //     super(props);
+    // }
     render(){
         let movie= this.props.movie;
         return <div id={movie.id} className="filmCard">

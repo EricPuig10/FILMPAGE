@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { createUuid } from "../../utils/createUuid";
-import { ButtonRenderForm } from "../ButtonRenderForm.jsx/ButtonRenderForm";
+// import { ButtonRenderForm } from "../ButtonRenderForm.jsx/ButtonRenderForm";
 import { MovieCard } from "../MovieCard/MovieCard";
 import { MovieForm } from "../MovieForm/MovieForm";
 
@@ -70,6 +70,7 @@ export class MovieList extends Component {
                 },
             ],
             showForm: false,
+            movieToEdit:{},
         }
     }   
 
@@ -98,16 +99,11 @@ export class MovieList extends Component {
     editMovie = (id) =>{
         this.showForm()
         let movieToEdit = this.state.movies.find(movie => movie.id === id);
-        console.log(movieToEdit)
-        return movieToEdit
+        this.setState({movieToEdit})
         
-
-
-        // let editedMovieUrl = MovieForm.inputMovieUrl.value
-        // editedMovieUrl = movieToEdit.imgUrl
         
     }
-
+    
 
     render() {
         return <section>
@@ -116,7 +112,7 @@ export class MovieList extends Component {
         : <button  type="button" onClick={this.showForm} className="addMovieTitle">Add Movie <i className="fa-solid fa-caret-down"></i></button> 
         }
         {this.state.showForm?
-            <MovieForm addNewMovie={this.addNewMovie}/>
+            <MovieForm addNewMovie={this.addNewMovie} movieToEdit={this.state.movieToEdit}/>
         :""
         }
             

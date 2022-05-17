@@ -1,9 +1,9 @@
 import {Component} from "react";
 
 export class MovieForm extends Component{
-    constructor(){
-        super();
-
+    constructor(props){
+        super(props);
+        console.log(this.props.movieToEdit)
         this.state = {
             showPreview:false,
             newMovie: {
@@ -17,6 +17,7 @@ export class MovieForm extends Component{
         };
     }
 
+    
 
     onSubmitHandler = (e) => {
     e.preventDefault();
@@ -50,8 +51,6 @@ export class MovieForm extends Component{
         if(this.state.newMovie.imgUrl.length > 0) this.setState({showPreview:true})
         else this.setState({showPreview:false});
 
-        console.log(this.state.showPreview);
-        console.log(this.state.newMovie.imgUrl.length)
     };
 
     
@@ -64,8 +63,10 @@ export class MovieForm extends Component{
                 <div className="inputsCont">
                     <input onChange={this.onInputChange} value={this.state.newMovie.imgUrl} name="imgUrl" id="inputMovieUrl" type="url" placeholder="Paste img url here..."></input>
                     <input onChange={this.onInputChange} value={this.state.newMovie.title} name="title" id="inputMovieTitle" type="text" placeholder="Title..."></input>
-                    <input onChange={this.onInputChange} value={this.state.newMovie.yearOfProd} name="yearOfProd" id="inputMovieYear" type="text" pattern="[0-9]{4}" placeholder="YearOfProd..."></input>
-                    <button type="submit" className="submitBtn" ><i className="fa-solid fa-paper-plane fa-xl"></i></button>
+                    <div className="yearAndSubmitCont">
+                        <input onChange={this.onInputChange} value={this.state.newMovie.yearOfProd} name="yearOfProd" id="inputMovieYear" type="text" pattern="[0-9]{4}" placeholder="YearOfProd..."></input>
+                        <button type="submit" className="submitBtn" ><i className="fa-solid fa-paper-plane fa-xl"></i></button>
+                    </div>
                 </div>
                 
                 <div className="preview">
