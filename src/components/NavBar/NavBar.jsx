@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 
 export class NavBar extends Component {
@@ -11,7 +12,8 @@ export class NavBar extends Component {
             </div>
     
             <div className="navButtons">
-                <button className="navBut">Home   </button>
+
+                <button className="navBut">Home</button>
             
             </div>
   
@@ -20,7 +22,7 @@ export class NavBar extends Component {
             </div>
   
             <div className="userZone">
-                <button className="logInBut">Log In</button>
+                <Link to="/LogIn"> <button className="logInBut">Log In</button> </Link>
             </div>
         </div>      
     </nav>

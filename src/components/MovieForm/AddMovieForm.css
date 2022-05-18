@@ -104,6 +104,10 @@
     border-radius: 50%;
 }
 
+.submitBtn:hover{
+    color:orange;
+}
+
 
 
 .formCont{
@@ -120,7 +124,6 @@
     border-style: solid;
     border-radius: 2vw;
     margin-left: 0%;
-    margin-bottom: 1%;
     width:15%;
     background-color: transparent;
 }

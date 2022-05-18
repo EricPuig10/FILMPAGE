@@ -11,8 +11,6 @@ export class MovieForm extends Component{
         };
     }
 
-    
-
     onSubmitHandler = (e) => {
     e.preventDefault();
 
@@ -60,8 +58,8 @@ export class MovieForm extends Component{
                     <div className="yearAndSubmitCont">
                         <input onChange={this.onInputChange} value={this.state.newMovie.yearOfProd} name="yearOfProd" id="inputMovieYear" type="text" pattern="[0-9]{4}" placeholder="YearOfProd..."></input>
                         {this.state.isEditMode? 
-                        <button type="submit" className="submitBtn" >Edit<i className="fa-solid fa-paper-plane fa-xl"></i></button>
-                        :<button type="submit" className="submitBtn" ><i className="fa-solid fa-paper-plane fa-xl"></i></button>
+                        <button type="submit" className="submitBtn"><i className="fa-solid fa-pen-to-square fa-xl"></i></button>
+                        :<button type="submit" className="submitBtn" ><i className="fa-solid fa-plus fa-xl"></i></button>
                         }
                     </div>
                 </div>

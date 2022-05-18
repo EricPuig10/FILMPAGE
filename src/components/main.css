@@ -3,6 +3,8 @@
 @import url(./NavBar/navBar.css);
 @import url(./TrendingFilms/trendingFilms.css);
 @import url(./MovieForm/AddMovieForm.css);
+@import url(./LogIn.css);
+
 
 body{
     margin: 0;
