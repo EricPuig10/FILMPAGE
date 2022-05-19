@@ -1,3 +1,35 @@
+#   MOVIE-APP
+
+## 🔗 LINK
+Read the instructions to visualize the project down in Getting Started with Create React App
+
+## 📜 BRIEFING
+This is a website prototype for an invented Cinema emultaing its billboard.
+
+## 💻 TECHNOLOGIES
+- HTML 5
+- CSS 3
+- JS ES6  VANILLA
+- REACT
+
+## ✅ OBJECTIVES
+Do a CRUD with React.
+Design the responsive website.
+Create an array in a json file so we can search inside and render the card in the page.
+Modifies states and move info between components using components.
+
+## ⚙️ TECHNIQUES USED
+- Responsive Design.
+- Modularity.
+- Basics of JS
+- Arrays methods.
+- React basics.
+
+##  👁️‍🗨️ MOCKUP
+![](/images/filmpage.png)
+![](/images/movieapp2.png)
+![](/images/movieapp3.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
