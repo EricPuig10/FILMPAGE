@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 export class MovieCard extends Component {
     // constructor(props){
@@ -7,8 +8,8 @@ export class MovieCard extends Component {
     render(){
         let movie= this.props.movie;
         return <div id={movie.id} className="filmCard">
-        <div className="photoFilmCont"> 
-            <img className="photoFilm"  src={movie.imgUrl} alt="photoFilm"/> 
+         <div className="photoFilmCont"> 
+         <Link to="UnchartedFilm"><img className="photoFilm"  src={movie.imgUrl} alt="photoFilm"/> </Link>
             <p className="yearOfProduction">{movie.yearOfProd}</p>
         </div>
     

@@ -13,7 +13,7 @@ export class NavBar extends Component {
     
             <div className="navButtons">
 
-                <button className="navBut">Home</button>
+                <Link to="/"> <button className="navBut">Home</button> </Link> 
             
             </div>
   

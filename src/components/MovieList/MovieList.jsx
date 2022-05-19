@@ -26,6 +26,7 @@ export class MovieList extends Component {
     showForm = () => {
         if(this.state.showForm) this.setState({showForm:false})
         else this.setState ({showForm:true})
+        this.resetInputsForm()
     }
 
     addNewMovie = (data) => {
@@ -51,12 +52,21 @@ export class MovieList extends Component {
         this.setState({isEditMode:true})      
     }
 
-    updateMovie = (id) => {
-        let editedMovie = this.state.movies.find(movie => movie.id === id);
-        this.setState({movies:[...this.state.movies, editedMovie]}) 
-        
+
+    updateMovie = (newMovie) => {
+        console.log(newMovie)
+        let newMoviesState = this.state.movies
+        let movieToEditIndex = newMoviesState.findIndex(movie => movie.id === newMovie.id)
+        newMoviesState[movieToEditIndex] = newMovie
+        this.setState({movies: newMoviesState})
+        console.log(this.state.movies) 
+        this.showForm()
     }
 
+
+    resetInputsForm = (e) => {
+        this.setState({newMovie:{id: '', title:'', yearOfProd:'', imgUrl:'', fav: ''}})
+        };
 
     render() {
         return <section>

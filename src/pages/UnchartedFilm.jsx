@@ -1,16 +1,15 @@
 import { Component } from "react";
 import { NavBar } from "../components/NavBar/NavBar";
+import { MovieInfo } from "../components/MovieInfo/MovieInfo";
 
 
-export class LogIn extends Component {
+export class UnchartedFilm extends Component {
     render() {
         return (
-            <body>
+            <div>
                 <NavBar/>
-                <div className="LogInCont">
-              <p>This is a Login Page</p>
+                <MovieInfo/>
             </div>
-            </body>
             
           );
     }

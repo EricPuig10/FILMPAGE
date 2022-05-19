@@ -29,19 +29,20 @@
     background-color: rgb(24, 23, 23);
     color: white;
     font-weight: bold;
-    font-size: 1em;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 3%;
-    padding-right: 3%;
+    font-size: 0.9em;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
     border-radius: 1.2vw;
+
 
 }
 
 .navBut:hover{
     background-color: rgb(15, 14, 14);
     border-style: solid;
-    border-color: orange;   
+    border-color: orange;  
+    font-size: 1.2em; 
 }
 
 
@@ -75,16 +76,16 @@
     background-color: rgb(24, 23, 23);
     color: white;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.9em;
     padding-top: 5%;
     padding-bottom: 5%;
-    width: 80%;
+    width: 100%;
     border-color: orange;
     border-style: solid;
 }
 
 .logInBut:hover{
-    width:85%;
+    width:100%;
     font-size: 1.2em;
 }
 
