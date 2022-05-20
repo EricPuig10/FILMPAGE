@@ -9,7 +9,7 @@ export class Home extends Component {
             <div>
               <NavBar/>
               <TrendingFilms/>
-              <MovieList/>
+              <MovieList />
             </div>
           );
     }

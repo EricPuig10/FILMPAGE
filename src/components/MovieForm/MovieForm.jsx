@@ -10,7 +10,7 @@ export class MovieForm extends Component{
             isEditMode: this.props.isEditMode,
         };
     }
-
+    
     onSubmitHandler = (e) => {
     e.preventDefault();
 
