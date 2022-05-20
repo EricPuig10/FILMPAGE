@@ -13,17 +13,19 @@ export class MovieList extends Component {
         this.state = {
           movies:[],
           showForm: false,
-          movieToEdit:{},
+          movieToEdit:{title:"", id:"", imgUrl:"", yearOfProd:""},
           isEditMode: false,
         }
       }
       
     
-    componentDidMount(){
+    componentDidMount=() => {
         movieServices.getAllMovies().then(res => {
-            console.log(res)
             this.setState({movies: res})
-        })       
+            console.log(this.state.movies)  
+        })
+             
+        
     }
 
 
@@ -36,10 +38,13 @@ export class MovieList extends Component {
     }
     
     addNewMovie = (data) => {
-    data.id = createUuid();
-    console.log(data);
-    this.setState({movies:[...this.state.movies, data]});
-    this.setState({showForm: false})
+    // data.id = createUuid();
+    // this.setState({movies:[...this.state.movies, data]});
+    
+    
+    movieServices.addMovie(data).then(res => 
+    {this.setState({movies: [...this.state.movies, res]})})
+    this.setState({showForm: false}) 
     }
     
     deleteMovie = (id) => {
@@ -47,12 +52,11 @@ export class MovieList extends Component {
     let deleteConfirmed = window.confirm((`Really remove ${movieToDelete[0].title} from the list?`));
     if (!deleteConfirmed) return;
     let filterMovies = this.state.movies.filter(movie => movie.id !== id);
-    this.setState({movies: filterMovies});
     console.log(filterMovies)
+
     movieServices.deleteMovie(id).then(res => {
         if (res.id==id)
         this.setState({movies:filterMovies})
-        console.log(res)
     })    
     };
     
@@ -78,7 +82,7 @@ export class MovieList extends Component {
     resetInputsForm = (e) => {
     this.setState({newMovie:{id: '', title:'', yearOfProd:'', imgUrl:'', fav: ''}})
     };
-    render() {
+    render() { console.log(this.state.movies)
         return <section>
         {this.state.showForm?
         <button  type="button" onClick={this.showForm} className="addMovieTitle"> Back <i className="fa-solid fa-caret-up"></i> </button>

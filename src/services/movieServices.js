@@ -17,6 +17,10 @@ export const movieServices = {
     },
 
     addMovie(data){
+        const movies = axios
+            .post (baseURL + "/movies", data)
+            .then ((res) => res.data);
+        return movies
 
     }
 }
