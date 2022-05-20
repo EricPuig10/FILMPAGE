@@ -25,6 +25,9 @@ export class MovieList extends Component {
             this.setState({movies: res})
         })       
     }
+
+
+
     
     showForm = () => {
     if(this.state.showForm) this.setState({showForm:false})
@@ -45,7 +48,12 @@ export class MovieList extends Component {
     if (!deleteConfirmed) return;
     let filterMovies = this.state.movies.filter(movie => movie.id !== id);
     this.setState({movies: filterMovies});
-    console.log(filterMovies)    
+    console.log(filterMovies)
+    movieServices.deleteMovie(id).then(res => {
+        if (res.id==id)
+        this.setState({movies:filterMovies})
+        console.log(res)
+    })    
     };
     
     editMovie = (id) =>{
