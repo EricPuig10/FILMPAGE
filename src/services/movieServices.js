@@ -1,9 +1,9 @@
 import axios from "axios";
-
+const baseURL = "https://62863528f0e8f0bb7c1250fb.mockapi.io";
 export const movieServices = {
     getAllMovies(){
         const movies = axios
-            .get("https://62863528f0e8f0bb7c1250fb.mockapi.io/movies")
+            .get(baseURL + "/movies")
             .then((res) => res.data );
         return movies;
     }
