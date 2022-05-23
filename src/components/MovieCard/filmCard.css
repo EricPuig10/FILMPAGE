@@ -93,6 +93,156 @@
 }
 
 
+@media only screen and (max-width: 900px) {
+    #containerListFilms{
+        background-color: rgb(24, 23, 23);
+        display: flex;
+        margin-top: 2%;
+        flex-wrap: wrap;
+        margin-left: 0%;
+
+    }
+    
+    .filmCard{
+        border-color: orange;
+        border-style: solid;
+        display: flex;
+        width:30%;
+        flex-direction: column;
+    }
+    .photoFilmCont{
+        position: relative;
+        height:100%;
+    }
+    .photoFilm{
+        width:100%;
+        height: 100%;
+    }
+    
+    .yearOfProduction{
+        position: absolute;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+        border-radius: 10%;
+        padding: 1%;
+        top: 88%;
+        left: 2%;
+    }
+    
+    .infoFilm{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .titleFilm{
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-left: 2%;
+        color: white;
+        align-items: center;
+    }
+    
+    .butFav{
+        color: white;
+        background-color: transparent;
+        border: none;
+    }
+    .butDelete{
+        color:white;
+        background-color: transparent;
+        border:none;
+        margin-right: 10%;    
+    }
+    .butEdit{
+        color:white;
+        background-color: transparent;
+        border:none;    
+    }
+    .butEdit:hover{
+        color:rgb(253, 177, 0);
+        background-color: transparent;
+        border:none;  
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    #containerListFilms{
+        background-color: rgb(24, 23, 23);
+        display: flex;
+        margin-top: 2%;
+        flex-wrap: wrap;
+        margin-left: 0%;
+
+    }
+    
+    .filmCard{
+        border-color: orange;
+        border-style: solid;
+        display: flex;
+        width:40%;
+        flex-direction: column;
+    }
+    .photoFilmCont{
+        position: relative;
+        height:100%;
+    }
+    .photoFilm{
+        width:100%;
+        height: 100%;
+    }
+    
+    .yearOfProduction{
+        position: absolute;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+        border-radius: 10%;
+        padding: 1%;
+        top: 88%;
+        left: 2%;
+    }
+    
+    .infoFilm{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .titleFilm{
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-left: 2%;
+        color: white;
+        align-items: center;
+    }
+    
+    .butFav{
+        color: white;
+        background-color: transparent;
+        border: none;
+    }
+    .butDelete{
+        color:white;
+        background-color: transparent;
+        border:none;
+        margin-right: 10%;    
+    }
+    .butEdit{
+        color:white;
+        background-color: transparent;
+        border:none;    
+    }
+    .butEdit:hover{
+        color:rgb(253, 177, 0);
+        background-color: transparent;
+        border:none;  
+    }
+
+}
+
+
+
 @media only screen and (max-width: 450px) {
     #containerListFilms{
         background-color: rgb(24, 23, 23);
@@ -166,4 +316,3 @@
     }
 
 }
-

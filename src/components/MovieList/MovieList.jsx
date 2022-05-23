@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { createUuid } from "../../utils/createUuid";
 import { MovieCard } from "../MovieCard/MovieCard";
 import { MovieForm } from "../MovieForm/MovieForm";
 import { movieServices } from "../../services/movieServices";
@@ -40,8 +39,6 @@ export class MovieList extends Component {
     addNewMovie = (data) => {
     // data.id = createUuid();
     // this.setState({movies:[...this.state.movies, data]});
-    
-    
     movieServices.addMovie(data).then(res => 
     {this.setState({movies: [...this.state.movies, res]})})
     this.setState({showForm: false}) 
@@ -55,7 +52,7 @@ export class MovieList extends Component {
     console.log(filterMovies)
 
     movieServices.deleteMovie(id).then(res => {
-        if (res.id==id)
+        if (res.id===id)
         this.setState({movies:filterMovies})
     })    
     };
@@ -69,12 +66,15 @@ export class MovieList extends Component {
     
     
     updateMovie = (newMovie) => {
-    console.log(newMovie)
+
     let newMoviesState = this.state.movies
     let movieToEditIndex = newMoviesState.findIndex(movie => movie.id === newMovie.id)
-    newMoviesState[movieToEditIndex] = newMovie
-    this.setState({movies: newMoviesState})
-    console.log(this.state.movies) 
+    
+    movieServices.updateMovie(newMovie.id, newMovie).then(res => {
+        newMoviesState[movieToEditIndex] = res
+        this.setState ({movies: newMoviesState})
+    })
+
     this.showForm()
     }
     
@@ -95,7 +95,7 @@ export class MovieList extends Component {
             
         <div id="containerListFilms">
             {this.state.movies.map((movie, key) => (
-            < MovieCard key = {key} movie = {movie} deleteMovie={this.deleteMovie} editMovie={this.editMovie} />
+            < MovieCard to={`/movie-info/${movie.id}`}  key = {key} movie = {movie} deleteMovie={this.deleteMovie} editMovie={this.editMovie} />
         ))}
         </div>
 

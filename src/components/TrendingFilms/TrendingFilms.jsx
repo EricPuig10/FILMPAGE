@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { trendingServices } from "../../services/trendingServices";
+// import { trendingServices } from "../../services/trendingServices";
 
 export class TrendingFilms extends Component {
 

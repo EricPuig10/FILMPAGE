@@ -22,5 +22,12 @@ export const movieServices = {
             .then ((res) => res.data);
         return movies
 
+    },
+
+    updateMovie(id, newMovie) {
+        const movies = axios 
+            .put (baseURL + "/movies/"+ id, newMovie)
+            .then ((res)=> res.data);
+        return movies
     }
 }

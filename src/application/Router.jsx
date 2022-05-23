@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { MovieInfo } from '../components/MovieInfo/MovieInfo';
 import { Home } from '../pages/Home';
+import { InfoFilm } from '../pages/InfoFilm';
 import { LogIn } from '../pages/LogIn';
-import { UnchartedFilm } from '../pages/UnchartedFilm';
+
 
 
 export default function Router() {
@@ -11,7 +13,8 @@ export default function Router() {
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/LogIn" element={<LogIn/>}/>
-            <Route path="/UnchartedFilm" element={<UnchartedFilm/>}/>
+            {/* <Route path="/movie/:id" element={<Movie/>}/>  */}
+            <Route exact path="movie-info/:movie.id" element={<InfoFilm/>}/>
         </Routes>
     </BrowserRouter>
   )

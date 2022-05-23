@@ -7,9 +7,10 @@ export class MovieCard extends Component {
     // }
     render(){
         let movie= this.props.movie;
+        let to = this.props.to;
         return <div id={movie.id} className="filmCard">
          <div className="photoFilmCont"> 
-         <Link to="UnchartedFilm"><img className="photoFilm"  src={movie.imgUrl} alt="photoFilm"/> </Link>
+         <Link to={to}><img className="photoFilm"  src={movie.imgUrl} alt="photoFilm"/> </Link>
             <p className="yearOfProduction">{movie.yearOfProd}</p>
         </div>
     
