@@ -2,12 +2,13 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 
 export class MovieCard extends Component {
-    // constructor(props){
-    //     super(props);
-    // }
+    
+    
     render(){
-        let movie= this.props.movie;
         let to = this.props.to;
+        let movie= this.props.movie;
+
+        
         return <div id={movie.id} className="filmCard">
          <div className="photoFilmCont"> 
          <Link to={to}><img className="photoFilm"  src={movie.imgUrl} alt="photoFilm"/> </Link>
