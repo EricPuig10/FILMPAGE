@@ -15,7 +15,7 @@
     "serve": "^13.0.2",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://ericpuig10.github.io/FILMPAGE/",
+  "homepage": "https://ericpuig10.github.io/FILMPAGE",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
