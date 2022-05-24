@@ -4,7 +4,7 @@
 Read the instructions to visualize the project down in Getting Started with Create React App
 
 ## 📜 BRIEFING
-This is a website prototype for an invented Cinema emultaing its billboard.
+This is a website prototype for an invented Cinema emultaing its billboard..
 
 ## 💻 TECHNOLOGIES
 - HTML 5
