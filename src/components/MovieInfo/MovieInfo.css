@@ -1,38 +1,38 @@
-.filmInfoCont{
-    margin-top: 2%;
-    border-style: solid;
-    border-color: orange;
-    display: flex;
-    border-radius: 2vw;
-    margin:2%;
-    padding: 2%;
-    width:70%;
-    margin-left: 12%;
+.filmInfoCont {
+  margin-top: 2%;
+  border-style: solid;
+  border-color: orange;
+  display: flex;
+  border-radius: 2vw;
+  margin: 2%;
+  padding: 2%;
+  width: 70%;
+  margin-left: 12%;
 }
 
-.textCont{
-    width:50%;
-    margin-left: 10%;
+.textCont {
+  width: 50%;
+  margin-left: 10%;
 }
 
-.imageCont{
-    width:50%;
-    margin-left: 10%;
+.imageCont {
+  width: 50%;
+  margin-left: 10%;
 }
 
 .imageCont img {
-    width:70%;
+  width: 70%;
 }
 
-h1{
-    color: white;
+h1 {
+  color: white;
 }
 
-h2{
-    color: white;
+h2 {
+  color: white;
 }
 
-p{
-    color: white;
-    font-size: 1.1em;
+p {
+  color: white;
+  font-size: 1.1em;
 }

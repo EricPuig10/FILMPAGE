@@ -1,191 +1,180 @@
-.navBar{
+.navBar {
+  background-color: rgb(24, 23, 23);
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  width: 30%;
+  margin-left: 3%;
+  font-size: 1.1em;
+  color: white;
+  background-color: rgb(24, 23, 23);
+}
+
+.hub {
+  color: orange;
+}
+
+.navButtons {
+  width: 30%;
+  background-color: rgb(24, 23, 23);
+  display: flex;
+  justify-content: space-around;
+  margin-left: -20%;
+}
+
+.navBut {
+  border: none;
+  background-color: rgb(24, 23, 23);
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 100%;
+  border-radius: 1.2vw;
+}
+
+.navBut:hover {
+  background-color: rgb(15, 14, 14);
+  border-style: solid;
+  border-color: orange;
+  font-size: 1.2em;
+}
+
+.inputCont {
+  width: 35%;
+  margin-left: 10%;
+}
+
+.searchFilm {
+  background-color: rgb(24, 23, 23);
+  padding: 1.5%;
+  border-radius: 1vw;
+  border-style: solid;
+  font-size: 0.9em;
+  width: 60%;
+  color: white;
+}
+
+.userZone {
+  width: 10%;
+  background-color: rgb(24, 23, 23);
+  display: flex;
+  justify-content: center;
+  margin-right: 2%;
+}
+
+.logInBut {
+  border-width: 10%;
+  border-radius: 1vw;
+  background-color: rgb(24, 23, 23);
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 100%;
+  border-color: orange;
+  border-style: solid;
+}
+
+.logInBut:hover {
+  width: 100%;
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 450px) {
+  .navBar {
     background-color: rgb(24, 23, 23);
     display: flex;
     align-items: center;
-}
+    width: 100%;
+  }
 
-.title{
-    width:30%;
-    margin-left: 3%;
-    font-size: 1.1em;
-    color:white;
+  .title {
+    width: 25%;
+    margin-left: 7%;
+    font-size: 0.8em;
+    color: white;
     background-color: rgb(24, 23, 23);
-}
+  }
 
-.hub{
+  .hub {
     color: orange;
-}
+  }
 
-.navButtons{
+  .navButtons {
     width: 30%;
     background-color: rgb(24, 23, 23);
     display: flex;
     justify-content: space-around;
-    margin-left: -20%;
-}
+    margin-left: -5%;
+    margin-top: 2%;
+  }
 
-.navBut{
+  .navBut {
     border: none;
     background-color: rgb(24, 23, 23);
     color: white;
     font-weight: bold;
-    font-size: 0.9em;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    width: 100%;
+    font-size: 0.8em;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
     border-radius: 1.2vw;
+    margin-right: 5%;
+    margin-bottom: 1%;
+  }
 
-
-}
-
-.navBut:hover{
+  .navBut:hover {
     background-color: rgb(15, 14, 14);
     border-style: solid;
-    border-color: orange;  
-    font-size: 1.2em; 
-}
+    border-color: orange;
+  }
 
+  .inputCont {
+    width: 20%;
+    margin-left: 0%;
+  }
 
-
-.inputCont{
-    width: 35%;
-    margin-left: 10%;
-}
-
-.searchFilm{
+  .searchFilm {
     background-color: rgb(24, 23, 23);
     padding: 1.5%;
     border-radius: 1vw;
     border-style: solid;
-    font-size: 0.9em;
+    font-size: 0.8em;
     width: 60%;
-    color:white;
-}
+  }
 
-.userZone{
-    width:10%;
+  .userZone {
+    width: 20%;
     background-color: rgb(24, 23, 23);
     display: flex;
     justify-content: center;
-    margin-right: 2%;
-}
+  }
 
-.logInBut{
+  .logInBut {
     border-width: 10%;
     border-radius: 1vw;
     background-color: rgb(24, 23, 23);
     color: white;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 0.7em;
     padding-top: 5%;
     padding-bottom: 5%;
-    width: 100%;
+    padding-right: 2%;
+    padding-left: 2%;
+    width: 60%;
     border-color: orange;
     border-style: solid;
-}
+    margin-left: -10%;
+  }
 
-.logInBut:hover{
-    width:100%;
+  .logInBut:hover {
+    width: 85%;
     font-size: 1.2em;
-}
-
-
-
-
-@media only screen and (max-width: 450px) {
-
-    .navBar{
-        background-color: rgb(24, 23, 23);
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
-    
-    .title{
-        width:25%;
-        margin-left: 7%;
-        font-size: 0.8em;
-        color:white;
-        background-color: rgb(24, 23, 23);
-    }
-    
-    .hub{
-        color: orange;
-    }
-    
-    .navButtons{
-        width:30%;
-        background-color: rgb(24, 23, 23);
-        display: flex;
-        justify-content: space-around;
-        margin-left: -5%;
-        margin-top: 2%;
-    }
-    
-    .navBut{
-        border: none;
-        background-color: rgb(24, 23, 23);
-        color: white;
-        font-weight: bold;
-        font-size: 0.8em;
-        padding-top: 3%;
-        padding-bottom: 3%;
-        padding-left: 3%;
-        padding-right: 3%;
-        border-radius: 1.2vw;
-        margin-right: 5%;
-        margin-bottom: 1%;
-    
-    }
-    
-    .navBut:hover{
-        background-color: rgb(15, 14, 14);
-        border-style: solid;
-        border-color: orange;   
-    }
-    
-    .inputCont{
-        width: 20%;
-        margin-left: 0%;
-    }
-    
-    .searchFilm{
-        background-color: rgb(24, 23, 23);
-        padding: 1.5%;
-        border-radius: 1vw;
-        border-style: solid;
-        font-size: 0.8em;
-        width: 60%;
-    }
-    
-    .userZone{
-        width:20%;
-        background-color: rgb(24, 23, 23);
-        display: flex;
-        justify-content: center;
-
-    }
-    
-    .logInBut{
-        border-width: 10%;
-        border-radius: 1vw;
-        background-color: rgb(24, 23, 23);
-        color: white;
-        font-weight: bold;
-        font-size: 0.7em;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        padding-right: 2%;
-        padding-left: 2%;
-        width: 60%;
-        border-color: orange;
-        border-style: solid;
-        margin-left: -10%;
-    }
-    
-    .logInBut:hover{
-        width:85%;
-        font-size: 1.2em;
-    }
-    
+  }
 }
