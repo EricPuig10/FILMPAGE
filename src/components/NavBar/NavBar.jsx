@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const NavBar = () => {
   return (
     <nav>
@@ -9,7 +11,7 @@ export const NavBar = () => {
         </div>
 
         <div className="navButtons">
-          <button className="navBut">Home</button>
+          <Link to ="/"><button className="navBut">Home</button></Link>
         </div>
 
         <div className="inputCont">
@@ -17,7 +19,7 @@ export const NavBar = () => {
         </div>
 
         <div className="userZone">
-          <button className="logInBut">Log In</button>
+          <Link to="/LogIn" ><button className="logInBut">Log In</button></Link>
         </div>
       </div>
     </nav>
