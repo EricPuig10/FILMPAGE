@@ -1,11 +1,16 @@
-export const MovieInfo = (props) => {
-  let movie = this.props.movie;
+import { useParams } from "react-router-dom";
+import { MovieList } from "../MovieList/MovieList";
+
+
+export const MovieInfo = ({movie}) => {
+
+  const { id } = useParams();
 
   return (
     <div className="filmInfoCont">
+      <p>{id}</p>
       <div className="textCont">
-        <h1>{movie.title}</h1>
-        <p>{movie.id}</p>
+        <h1>Uncharted</h1>
         <h2>Sinopsis</h2>
         <p>
           Basada en una de las series de videojuegos más vendidas y aclamadas
@@ -22,7 +27,7 @@ export const MovieInfo = (props) => {
 
       <div className="imageCont">
         <img
-          src={movie.img}
+          src="https://assets-prd.ignimgs.com/2022/01/13/uncharted-poster-full-1642086040683.jpg"
           alt="fotoUncharted"
         />
       </div>

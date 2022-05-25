@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
+
 export const MovieCard = (props) => {
-  let movie = props.movie;
+  const movie = props.movie;
+  let to = props.to
+
 
   return (
     <div id={movie.id} className="filmCard">
       <div className="photoFilmCont">
-        <img className="photoFilm" src={movie.imgUrl} alt="photoFilm" />
+        <Link to={`/movie-info/${movie.id}`}> <img className="photoFilm" src={movie.imgUrl} alt="photoFilm" /> </Link>
         <p className="yearOfProduction">{movie.yearOfProd}</p>
       </div>
 

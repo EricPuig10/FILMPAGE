@@ -108,7 +108,6 @@ export const MovieList = () => {
       <div id="containerListFilms">
         {movies.map((movie, key) => (
           <MovieCard
-            // to={`/movie-info/${movie.id}`}
             key={key}
             movie={movie}
             deleteMovie={deleteMovie}
