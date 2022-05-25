@@ -11,7 +11,7 @@ export default function Router() {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Home/>}/>
+            <Route path="/FILMPAGE" element={<Home/>}/>
             <Route path="/LogIn" element={<LogIn/>}/>
             {/* <Route path="/movie/:id" element={<Movie/>}/>  */}
             <Route path="/movie-info/:movie.id" element={<InfoFilm/>}/>

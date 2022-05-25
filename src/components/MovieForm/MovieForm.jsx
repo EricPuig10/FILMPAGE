@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export const MovieForm = (props) => {
   const [newMovie, setNewMovie] = useState(props.movieToEdit);
-  const [isEditMode, setIsEditMode] = useState(props.isEditMode);
+  const [isEditMode] = useState(props.isEditMode);
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
