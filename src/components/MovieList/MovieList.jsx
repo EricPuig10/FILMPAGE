@@ -29,6 +29,7 @@ export const MovieList = () => {
     if (isShowForm) setIsShowForm(false);
     else setIsShowForm(true);
     resetInputsForm();
+    setIsEditMode(false)
   };
 
   const addNewMovie = (data) => {

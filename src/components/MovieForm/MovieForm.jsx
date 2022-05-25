@@ -35,7 +35,7 @@ export const MovieForm = (props) => {
   // };
 
   return (
-    <div className="addNewFilm">
+    <div id="addNewFilm">
       <form onSubmit={onSubmitHandler}>
         <div className="formCont">
           <div className="inputsCont">

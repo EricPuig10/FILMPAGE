@@ -1,5 +1,3 @@
-
-
 export const MovieCard = (props) => {
   let movie = props.movie;
 
@@ -13,14 +11,12 @@ export const MovieCard = (props) => {
       <div className="infoFilm">
         <h2 className="titleFilm">{movie.title}</h2>
         <button className="butFav">
-          <i className="fa-solid fa-star fa-lg"></i>{" "}
+          <i className="fa-solid fa-star fa-lg"></i>
         </button>
-        <button
-          className="butEdit"
-          onClick={() => props.editMovie(movie.id)}
-        >
-          {" "}
-          <i className="fa-solid fa-pen-to-square fa-lg"></i>
+        <button className="butEdit" onClick={() => props.editMovie(movie.id)}>
+          <a className="butEdit" href="#root">
+            <i className="fa-solid fa-pen-to-square fa-lg"></i>
+          </a>
         </button>
         <button
           onClick={() => props.deleteMovie(movie.id)}
