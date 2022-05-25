@@ -1,102 +1,87 @@
-import { Component } from "react";
+import { useState } from "react";
 
-export class MovieForm extends Component {
-  constructor(props) {
-    super(props);
+export const MovieForm = (props) => {
+  const [newMovie, setNewMovie] = useState(props.movieToEdit);
+  const [isEditMode, setIsEditMode] = useState(props.isEditMode);
 
-    this.state = {
-      showPreview: false,
-      newMovie: this.props.movieToEdit,
-      isEditMode: this.props.isEditMode,
-    };
-  }
-
-  onSubmitHandler = (e) => {
+  const onSubmitHandler = (e) => {
     e.preventDefault();
 
-    if (this.state.newMovie.title.length > 0) {
-      !this.state.isEditMode
-        ? this.props.addNewMovie(this.state.newMovie)
-        : this.props.updateMovie(this.state.newMovie);
+    if (newMovie.title.length > 0) {
+      !isEditMode ? props.addNewMovie(newMovie) : props.updateMovie(newMovie);
     }
 
-    this.resetInputsForm(e);
+    resetInputsForm(e);
   };
 
   //Extract to method
 
-  resetInputsForm = (e) => {
-    this.setState({
-      newMovie: { id: "", title: "", yearOfProd: "", imgUrl: ""},
+  const resetInputsForm = (e) => {
+    setNewMovie({
+      newMovie: { id: "", title: "", yearOfProd: "", imgUrl: "" },
     });
   };
 
-  onInputChange = (e) => {
+  const onInputChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    this.setState({ newMovie: { ...this.state.newMovie, [name]: value } });
+    setNewMovie({ ...newMovie, [name]: value });
   };
 
-  // showPreview = () => {
-  //     if(this.state.newMovie.imgUrl.length > 0) this.setState({showPreview:true})
-  //     else this.setState({showPreview:false});
+  // const showPreview = () => {
+  //     if(newMovie.imgUrl.length > 0) setIsShowPreview({isShowPreview:true})
+  //     else setIsShowPreview({isShowPreview:false});
 
   // };
 
-  render() {
-    return (
-      <div className="addNewFilm">
-        <form onSubmit={this.onSubmitHandler}>
-          <div className="formCont">
-            <div className="inputsCont">
+  return (
+    <div className="addNewFilm">
+      <form onSubmit={onSubmitHandler}>
+        <div className="formCont">
+          <div className="inputsCont">
+            <input
+              onChange={onInputChange}
+              value={newMovie.imgUrl}
+              name="imgUrl"
+              id="inputMovieUrl"
+              type="url"
+              placeholder="Paste img url here..."
+            ></input>
+            <input
+              onChange={onInputChange}
+              value={newMovie.title}
+              name="title"
+              id="inputMovieTitle"
+              type="text"
+              placeholder="Title..."
+            ></input>
+            <div className="yearAndSubmitCont">
               <input
-                onChange={this.onInputChange}
-                value={this.state.newMovie.imgUrl}
-                name="imgUrl"
-                id="inputMovieUrl"
-                type="url"
-                placeholder="Paste img url here..."
-              ></input>
-              <input
-                onChange={this.onInputChange}
-                value={this.state.newMovie.title}
-                name="title"
-                id="inputMovieTitle"
+                onChange={onInputChange}
+                value={newMovie.yearOfProd}
+                name="yearOfProd"
+                id="inputMovieYear"
                 type="text"
-                placeholder="Title..."
+                pattern="[0-9]{4}"
+                placeholder="YearOfProd..."
               ></input>
-              <div className="yearAndSubmitCont">
-                <input
-                  onChange={this.onInputChange}
-                  value={this.state.newMovie.yearOfProd}
-                  name="yearOfProd"
-                  id="inputMovieYear"
-                  type="text"
-                  pattern="[0-9]{4}"
-                  placeholder="YearOfProd..."
-                ></input>
-                {this.state.isEditMode ? (
-                  <button type="submit" className="submitBtn">
-                    <i className="fa-solid fa-pen-to-square fa-xl"></i>
-                  </button>
-                ) : (
-                  <button type="submit" className="submitBtn">
-                    <i className="fa-solid fa-plus fa-xl"></i>
-                  </button>
-                )}
-              </div>
-            </div>
-
-            <div className="preview">
-              {this.state.showPreview ? (
-                ""
+              {isEditMode ? (
+                <button type="submit" className="submitBtn">
+                  <i className="fa-solid fa-pen-to-square fa-xl"></i>
+                </button>
               ) : (
-                <img src={this.state.newMovie.imgUrl} alt="preview" />
+                <button type="submit" className="submitBtn">
+                  <i className="fa-solid fa-plus fa-xl"></i>
+                </button>
               )}
             </div>
           </div>
-        </form>
-      </div>
-    );
-  }
-}
+
+          <div className="preview">
+            <img src={newMovie.imgUrl} alt="preview" />
+          </div>
+        </div>
+      </form>
+    </div>
+  );
+};
