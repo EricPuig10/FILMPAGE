@@ -1,13 +1,12 @@
 .trendingFilms{
     background-color: rgb(24, 23, 23); 
-    height: 5%;
     position: relative;
+
+    
 }
 
 #imgTrendingFilm{
     width: 100%;
-    height: 10%;
-    
 }
 
 .butLeft{

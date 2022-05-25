@@ -14,9 +14,7 @@ export const TrendingFilms = () => {
 
   return (
     <div className="trendingFilms">
-      <a href=".">
-        <img id="imgTrendingFilm" alt="fotoTrending" src={imgInit} />
-      </a>
+      <img id="imgTrendingFilm" alt="fotoTrending" src={imgInit} />
 
       <button className="butLeft" onClick={changeImg}>
         <i className="fa-solid fa-angle-left fa-2xl"></i>
