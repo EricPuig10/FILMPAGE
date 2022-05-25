@@ -6,7 +6,7 @@
 
 .title {
   width: 30%;
-  margin-left: 3%;
+  margin-left: 2%;
   font-size: 1.1em;
   color: white;
   background-color: rgb(24, 23, 23);
@@ -95,8 +95,8 @@
 
   .title {
     width: 25%;
-    margin-left: 7%;
-    font-size: 0.8em;
+    margin-left: 2%;
+    font-size: 0.7em;
     color: white;
     background-color: rgb(24, 23, 23);
   }
@@ -145,7 +145,7 @@
     border-radius: 1vw;
     border-style: solid;
     font-size: 0.8em;
-    width: 60%;
+    width: 80%;
   }
 
   .userZone {
