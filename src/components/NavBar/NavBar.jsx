@@ -19,7 +19,7 @@ export const NavBar = () => {
         </div>
 
         <div className="userZone">
-          <Link to="/LogIn" ><button className="logInBut">Log In</button></Link>
+          <Link  to="/LogIn" ><button className="logInBut">LogIn</button></Link>
         </div>
       </div>
     </nav>
