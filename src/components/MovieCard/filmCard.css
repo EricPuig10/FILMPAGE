@@ -97,7 +97,6 @@
         display: flex;
         margin-top: 2%;
         flex-wrap: wrap;
-        margin-left: 0%;
 
     }
     
@@ -105,7 +104,7 @@
         border-color: orange;
         border-style: solid;
         display: flex;
-        width:30%;
+        width:28%;
         flex-direction: column;
     }
     .photoFilmCont{
@@ -171,8 +170,7 @@
         display: flex;
         margin-top: 2%;
         flex-wrap: wrap;
-        margin-left: 0%;
-
+        margin-left: 7%;
     }
     
     .filmCard{
@@ -247,7 +245,7 @@
         display: flex;
         margin-top: 2%;
         flex-wrap: wrap;
-        margin-left: 0%;
+        justify-content: center;
 
     }
     
