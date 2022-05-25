@@ -27,7 +27,7 @@ export class MovieForm extends Component {
 
   resetInputsForm = (e) => {
     this.setState({
-      newMovie: { id: "", title: "", yearOfProd: "", imgUrl: "", fav: "" },
+      newMovie: { id: "", title: "", yearOfProd: "", imgUrl: ""},
     });
   };
 
