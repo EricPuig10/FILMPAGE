@@ -29,7 +29,7 @@ export const MovieList = () => {
     if (isShowForm) setIsShowForm(false);
     else setIsShowForm(true);
     resetInputsForm();
-    setIsEditMode(false)
+    setIsEditMode(false);
   };
 
   const addNewMovie = (data) => {
@@ -64,9 +64,10 @@ export const MovieList = () => {
 
   const updateMovie = (newMovie) => {
     movieServices.updateMovie(newMovie.id, newMovie).then((res) => {
+      let movieToEdit = movies.map((movie) =>
+        movie.id === newMovie.id ? newMovie : movie
+      );
 
-      let movieToEdit = movies.map(movie => movie.id === newMovie.id ? newMovie : movie)
-      
       // let movieToEditIndex = newMoviesState.findIndex(
       //   (movie) => movie.id === newMovie.id
       // );
@@ -118,4 +119,3 @@ export const MovieList = () => {
     </section>
   );
 };
-
