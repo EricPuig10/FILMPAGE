@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { movieServices } from "../../services/movieServices";
 import { MovieCard } from "../MovieCard/MovieCard";
 import { MovieForm } from "../MovieForm/MovieForm";
+import Loader from "../Loader/Loader";
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -14,15 +15,22 @@ export const MovieList = () => {
     sinopsis: "",
   });
   const [isEditMode, setIsEditMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   //canviem componentdidmount x useeffect
   useEffect(() => {
     getAllMovies();
   }, []);
 
+  // const toggleLoading = () =>{
+
+  // }
+
   const getAllMovies = () => {
+    setIsLoading(true);
     movieServices.getAllMovies().then((res) => {
       setMovies(res);
+      setIsLoading(false);
     });
   };
 
@@ -56,6 +64,13 @@ export const MovieList = () => {
     });
   };
 
+  //opcio 2 de delete
+  // const deleteMovie = (id) => {
+  //   movieServices.deleteMovie(id).then((res) => {
+  //     getAllMovies();
+  //   });
+  // };
+
   const editMovie = (id) => {
     showForm();
     let movieToEdit = movies.find((movie) => movie.id === id);
@@ -81,7 +96,13 @@ export const MovieList = () => {
   };
 
   const resetInputsForm = (e) => {
-    setMovieToEdit({ id: "", title: "", yearOfProd: "", imgUrl: "", sinopsis: "" });
+    setMovieToEdit({
+      id: "",
+      title: "",
+      yearOfProd: "",
+      imgUrl: "",
+      sinopsis: "",
+    });
   };
 
   return (
@@ -106,17 +127,21 @@ export const MovieList = () => {
       ) : (
         ""
       )}
-
-      <div id="containerListFilms">
-        {movies.map((movie, key) => (
-          <MovieCard
-            key={key}
-            movie={movie}
-            deleteMovie={deleteMovie}
-            editMovie={editMovie}
-          />
-        ))}
-      </div>
+      {isLoading ? (
+      
+      <Loader/>
+      
+      ) : (<div id="containerListFilms">
+      {movies.map((movie, key) => (
+        <MovieCard
+          key={key}
+          movie={movie}
+          deleteMovie={deleteMovie}
+          editMovie={editMovie}
+        />
+      
+      ))}
+    </div>)}
     </section>
   );
 };
