@@ -27,4 +27,11 @@ export const movieServices = {
       .then((res) => res.data);
     return movies;
   },
+
+  getMovieById (id) {
+    const movies = axios
+      .get (baseURL + "/movies/" + id)
+      .then ((res) => res.data);
+    return movies;
+  },
 };
