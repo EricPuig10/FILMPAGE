@@ -1,78 +1,35 @@
-.trendingFilms{
-    background-color: rgb(24, 23, 23); 
-    position: relative;
-    
-
+.trendingFilms {
+  background-color: rgb(24, 23, 23);
+  position: relative;
 }
 
-#imgTrendingFilm{
-    width: 100%;
-    box-shadow: 0 0 15px orange;
+#imgTrendingFilm {
+  width: 100%;
+  box-shadow: 0 0 15px orange;
 }
 
-.butLeft{
-position: absolute;
-top:45%;
-background-color: transparent;
-border: none;
-left: 1%;
-color: white;
+.butLeft {
+  position: absolute;
+  top: 45%;
+  background-color: transparent;
+  border: none;
+  left: 1%;
+  color: white;
 }
 
-.butLeft:hover{
-    font-size: 1.2em;
+.butLeft:hover {
+  font-size: 1.2em;
 }
 
-.butRight{
-    position: absolute;
-    top:45%;
-    background-color: transparent;
-    border: none;
-    right: 1%;
-    color: white;
-    }
-
-.butRight:hover{
-    font-size: 1.2em;
+.butRight {
+  position: absolute;
+  top: 45%;
+  background-color: transparent;
+  border: none;
+  right: 1%;
+  color: white;
 }
 
-@media only screen and (max-width: 450px) {
-    .trendingFilms{
-        background-color: rgb(24, 23, 23); 
-        height: 5%;
-        position: relative;
-    }
-    
-    .imgTrendingFilm{
-        width: 100%;
-        height: 100px;
-        
-    }
-    
-    .butLeft{
-    position: absolute;
-    top:43%;
-    background-color: transparent;
-    border: none;
-    left: 3%;
-    color: white;
-    }
-    
-    .butLeft:hover{
-        font-size: 1.2em;
-    }
-    
-    .butRight{
-        position: absolute;
-        top:43%;
-        background-color: transparent;
-        border: none;
-        right: 3%;
-        color: white;
-        }
-    
-    .butRight:hover{
-        font-size: 1.2em;
-    }
-    
+.butRight:hover {
+  font-size: 1.2em;
 }

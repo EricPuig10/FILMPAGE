@@ -1,315 +1,142 @@
+#containerListFilms {
+  background-color: rgb(24, 23, 23);
+  display: flex;
+  margin-top: 2%;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
 
-#containerListFilms{
+.filmCard {
+  border-color: orange;
+  border-style: solid;
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  margin: 1%;
+  margin-left: 3%;
+  box-shadow: 0 0 15px orange;
+}
+.photoFilmCont {
+  border-style: solid;
+  height: 90%;
+  position: relative;
+}
+.photoFilm {
+  width: 100%;
+  height: 100%;
+}
+
+.yearOfProduction {
+  position: absolute;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border-radius: 10%;
+  padding: 1%;
+  top: 82%;
+  left: 2%;
+}
+
+.infoFilm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleFilm {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 2%;
+  color: white;
+  align-items: center;
+}
+
+.butFav {
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+.butFav:active {
+  color: rgb(255, 242, 0);
+  background-color: transparent;
+  border: none;
+}
+
+.butFav:hover {
+  color: rgb(255, 242, 0);
+  background-color: transparent;
+  border: none;
+}
+.deleteBtn {
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin-right: 2%;
+}
+.deleteBtn:hover {
+  color: rgb(142, 0, 0);
+  background-color: transparent;
+  border: none;
+  margin-right: 2%;
+}
+.butEdit {
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+.butEdit:hover {
+  color: rgb(253, 177, 0);
+  background-color: transparent;
+  border: none;
+}
+
+@media only screen and (max-width: 900px) {
+  #containerListFilms {
     background-color: rgb(24, 23, 23);
     display: flex;
     margin-top: 2%;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
-}
+  }
 
-.filmCard{
+  .filmCard {
     border-color: orange;
     border-style: solid;
     display: flex;
-    width:20%;
+    width: 28%;
     flex-direction: column;
-    margin: 1%;
-    margin-left: 3%;
-    box-shadow: 0 0 15px orange;
-}
-.photoFilmCont{
-    border-style: solid;
-    height:90%;
-    position: relative;
-    
-}
-.photoFilm{
-    width:100%;
-    height: 100%;  
-}
-
-.yearOfProduction{
-    position: absolute;
-    font-weight: bold;
-    color: white;
-    background-color: black;
-    border-radius: 10%;
-    padding: 1%;
-    top: 82%;
-    left: 2%;
-}
-
-.infoFilm{
-    display: flex;
-    justify-content: space-between;
-}
-
-.titleFilm{
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-left: 2%;
-    color: white;
-    align-items: center;
-}
-
-.butFav{
-    color: white;
-    background-color: transparent;
-    border: none;
-}
-.butFav:active{
-    color: rgb(255, 242, 0);
-    background-color: transparent;
-    border: none;
-}
-
-.butFav:hover{
-    color: rgb(255, 242, 0);
-    background-color: transparent;
-    border: none;
-}
-.deleteBtn{
-    color:white;
-    background-color: transparent;
-    border:none;
-    margin-right: 2%;    
-}
-.deleteBtn:hover{
-    color:rgb(142, 0, 0);
-    background-color: transparent;
-    border:none;
-    margin-right: 2%;    
-}
-.butEdit{
-    color:white;
-    background-color: transparent;
-    border:none;    
-}
-.butEdit:hover{
-    color:rgb(253, 177, 0);
-    background-color: transparent;
-    border:none;  
-}
-
-
-@media only screen and (max-width: 900px) {
-    #containerListFilms{
-        background-color: rgb(24, 23, 23);
-        display: flex;
-        margin-top: 2%;
-        flex-wrap: wrap;
-
-    }
-    
-    .filmCard{
-        border-color: orange;
-        border-style: solid;
-        display: flex;
-        width:28%;
-        flex-direction: column;
-    }
-    .photoFilmCont{
-        position: relative;
-        height:100%;
-    }
-    .photoFilm{
-        width:100%;
-        height: 100%;
-    }
-    
-    .yearOfProduction{
-        position: absolute;
-        font-weight: bold;
-        color: white;
-        background-color: black;
-        border-radius: 10%;
-        padding: 1%;
-        top: 88%;
-        left: 2%;
-    }
-    
-    .infoFilm{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .titleFilm{
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-left: 2%;
-        color: white;
-        align-items: center;
-    }
-    
-    .butFav{
-        color: white;
-        background-color: transparent;
-        border: none;
-    }
-    .butDelete{
-        color:white;
-        background-color: transparent;
-        border:none;
-        margin-right: 10%;    
-    }
-    .butEdit{
-        color:white;
-        background-color: transparent;
-        border:none;    
-    }
-    .butEdit:hover{
-        color:rgb(253, 177, 0);
-        background-color: transparent;
-        border:none;  
-    }
-
+  }
 }
 
 @media only screen and (max-width: 700px) {
-    #containerListFilms{
-        background-color: rgb(24, 23, 23);
-        display: flex;
-        margin-top: 2%;
-        flex-wrap: wrap;
+  #containerListFilms {
+    background-color: rgb(24, 23, 23);
+    display: flex;
+    margin-top: 2%;
+    flex-wrap: wrap;
+  }
 
-    }
-    
-    .filmCard{
-        border-color: orange;
-        border-style: solid;
-        display: flex;
-        width:40%;
-        flex-direction: column;
-    }
-    .photoFilmCont{
-        position: relative;
-        height:100%;
-    }
-    .photoFilm{
-        width:100%;
-        height: 100%;
-    }
-    
-    .yearOfProduction{
-        position: absolute;
-        font-weight: bold;
-        color: white;
-        background-color: black;
-        border-radius: 10%;
-        padding: 1%;
-        top: 88%;
-        left: 2%;
-    }
-    
-    .infoFilm{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .titleFilm{
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-left: 2%;
-        color: white;
-        align-items: center;
-    }
-    
-    .butFav{
-        color: white;
-        background-color: transparent;
-        border: none;
-    }
-    .butDelete{
-        color:white;
-        background-color: transparent;
-        border:none;
-        margin-right: 10%;    
-    }
-    .butEdit{
-        color:white;
-        background-color: transparent;
-        border:none;    
-    }
-    .butEdit:hover{
-        color:rgb(253, 177, 0);
-        background-color: transparent;
-        border:none;  
-    }
-
+  .filmCard {
+    border-color: orange;
+    border-style: solid;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+  }
 }
 
-
-
 @media only screen and (max-width: 450px) {
-    #containerListFilms{
-        background-color: rgb(24, 23, 23);
-        display: flex;
-        margin-top: 2%;
-        flex-wrap: wrap;
-        justify-content: center;
+  #containerListFilms {
+    background-color: rgb(24, 23, 23);
+    display: flex;
+    margin-top: 2%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    }
-    
-    .filmCard{
-        border-color: orange;
-        border-style: solid;
-        display: flex;
-        width:70%;
-        flex-direction: column;
-    }
-    .photoFilmCont{
-        position: relative;
-        height:100%;
-    }
-    .photoFilm{
-        width:100%;
-        height: 100%;
-    }
-    
-    .yearOfProduction{
-        position: absolute;
-        font-weight: bold;
-        color: white;
-        background-color: black;
-        border-radius: 10%;
-        padding: 1%;
-        top: 88%;
-        left: 2%;
-    }
-    
-    .infoFilm{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .titleFilm{
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-left: 2%;
-        color: white;
-        align-items: center;
-    }
-    
-    .butFav{
-        color: white;
-        background-color: transparent;
-        border: none;
-    }
-    .butDelete{
-        color:white;
-        background-color: transparent;
-        border:none;
-        margin-right: 10%;    
-    }
-    .butEdit{
-        color:white;
-        background-color: transparent;
-        border:none;    
-    }
-    .butEdit:hover{
-        color:rgb(253, 177, 0);
-        background-color: transparent;
-        border:none;  
-    }
-
+  .filmCard {
+    border-color: orange;
+    border-style: solid;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+  }
 }
