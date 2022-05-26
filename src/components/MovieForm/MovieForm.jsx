@@ -18,7 +18,7 @@ export const MovieForm = (props) => {
 
   const resetInputsForm = (e) => {
     setNewMovie({
-      newMovie: { id: "", title: "", yearOfProd: "", imgUrl: "" },
+      newMovie: { id: "", title: "", yearOfProd: "", imgUrl: "", sinopsis: "" },
     });
   };
 
@@ -55,6 +55,14 @@ export const MovieForm = (props) => {
               type="text"
               placeholder="Title..."
             ></input>
+             <input
+                onChange={onInputChange}
+                value={newMovie.sinopsis}
+                name="sinopsis"
+                id="inputSinopsis"
+                type="text"
+                placeholder="Add sinopsis..."
+              ></input>
             <div className="yearAndSubmitCont">
               <input
                 onChange={onInputChange}

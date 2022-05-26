@@ -63,6 +63,19 @@
   display: flex;
 }
 
+#inputSinopsis{
+    padding: 1%;
+    background-color: rgb(24, 23, 23);
+    padding: 1.5%;
+    border-radius: 1vw;
+    border-style: solid;
+    border-color: white;
+    font-size: 0.9em;
+    width: 60%;
+    color: white;
+    margin-bottom: 2%;
+}
+
 #inputMovieYear {
   padding: 1%;
   background-color: rgb(24, 23, 23);
@@ -197,6 +210,18 @@
   #inputMovieTitle:hover {
     border-color: orange;
   }
+  #inputSinopsis{
+    padding: 1%;
+    background-color: rgb(24, 23, 23);
+    padding: 1.5%;
+    border-radius: 1vw;
+    border-style: solid;
+    border-color: white;
+    font-size: 0.9em;
+    width: 60%;
+    color: white;
+    margin-bottom: 2%;
+}
 
   .yearAndSubmitCont {
     display: flex;

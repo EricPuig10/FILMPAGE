@@ -11,6 +11,7 @@ export const MovieList = () => {
     id: "",
     imgUrl: "",
     yearOfProd: "",
+    sinopsis: "",
   });
   const [isEditMode, setIsEditMode] = useState(false);
 
@@ -80,7 +81,7 @@ export const MovieList = () => {
   };
 
   const resetInputsForm = (e) => {
-    setMovieToEdit({ id: "", title: "", yearOfProd: "", imgUrl: "" });
+    setMovieToEdit({ id: "", title: "", yearOfProd: "", imgUrl: "", sinopsis: "" });
   };
 
   return (
