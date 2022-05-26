@@ -1,10 +1,10 @@
 #   MOVIE-APP
 
 ## 🔗 LINK
-Read the instructions to visualize the project down in Getting Started with Create React App
+https://ericpuig10.github.io/FILMPAGE/
 
 ## 📜 BRIEFING
-This is a website prototype for an invented Cinema emultaing its billboard..
+This is a website prototype for an invented Cinema emultaing its billboard done with CRUD...
 
 ## 💻 TECHNOLOGIES
 - HTML 5
@@ -16,7 +16,9 @@ This is a website prototype for an invented Cinema emultaing its billboard..
 Do a CRUD with React.
 Design the responsive website.
 Create an array in a json file so we can search inside and render the card in the page.
-Modifies states and move info between components using components.
+Then call to a external api.
+Modifies states and move info between components using class components.
+Migrate class components to functional components.
 
 ## ⚙️ TECHNIQUES USED
 - Responsive Design.
@@ -25,10 +27,11 @@ Modifies states and move info between components using components.
 - Arrays methods.
 - React basics.
 
-##  👁️‍🗨️ MOCKUP
-![](/images/filmpage.png)
-![](/images/movieapp2.png)
-![](/images/movieapp3.png)
+##  👁️‍🗨️ SCREENSHOT PREVIEW
+![image](https://user-images.githubusercontent.com/102654586/170436894-ab3b8ca1-1186-4607-98a4-f93fc0c6aa09.png)
+![image](https://user-images.githubusercontent.com/102654586/170436956-b0114a95-d9a2-44b6-8430-00c77f61243e.png)
+![image](https://user-images.githubusercontent.com/102654586/170437024-e01d8ea6-4deb-41b2-8a31-cbf0ca27d05c.png)
+
 
 # Getting Started with Create React App
 
