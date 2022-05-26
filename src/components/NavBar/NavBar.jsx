@@ -11,7 +11,7 @@ export const NavBar = () => {
         </div>
 
         <div className="navButtons">
-          <Link to ="/FILMPAGE"><button className="navBut">Home</button></Link>
+          <Link to ="/"><button className="navBut">Home</button></Link>
         </div>
 
         <div className="inputCont">
