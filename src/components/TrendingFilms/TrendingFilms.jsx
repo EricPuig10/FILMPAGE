@@ -14,6 +14,8 @@ export const TrendingFilms = () => {
     getAllMovies();
   }, []);
 
+  
+
   const getAllMovies = () => {
     movieServices.getAllMovies().then((res) => {
       setMovies(res);
@@ -22,13 +24,21 @@ export const TrendingFilms = () => {
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
+
+    
+    
   };
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  //demanar sergi, no entes
+  
+
+
+
+  
+
   // if (!Array.isArray(movies) || movies.length <= 0) {
   //   return null;
   // }
@@ -48,6 +58,7 @@ export const TrendingFilms = () => {
                 id="imgTrendingFilm"
                 alt="fotoTrending"
                 src={movie.imgSlider}
+                onChange={setInterval(nextSlide,5000)}
               />
             )}
           </div>
