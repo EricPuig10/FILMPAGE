@@ -12,6 +12,7 @@
   box-shadow: 0 0 15px orange;
   width:97.9vw;
   height:50vh;
+  object-fit:cover;
 
 }
 
@@ -50,6 +51,7 @@
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.01);
+
 }
 
 @media only screen and (max-width:450px) {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { movieServices } from "../../services/movieServices";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const TrendingFilms = () => {
   const [movies, setMovies] = useState([]);
@@ -19,12 +20,14 @@ export const TrendingFilms = () => {
   const getAllMovies = () => {
     movieServices.getAllMovies().then((res) => {
       setMovies(res);
+
     });
   };
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
-
+    
+    
     
     
   };
@@ -54,12 +57,12 @@ export const TrendingFilms = () => {
             className={index === current ? "slide active" : "slide"}
           >
             {index === current && (
-              <img
-                id="imgTrendingFilm"
-                alt="fotoTrending"
-                src={movie.imgSlider}
-                onChange={setInterval(nextSlide,5000)}
-              />
+              <Link to={`/movie-info/${movie.id}`}><img
+              id="imgTrendingFilm"
+              alt="fotoTrending"
+              src={movie.imgSlider}
+              // onChange={setInterval(nextSlide,5000)}
+            /></Link>
             )}
           </div>
         ))}

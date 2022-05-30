@@ -28,7 +28,7 @@ export const MovieCard = (props) => {
     <div id={movie.id} className="filmCard">
       <div className="photoFilmCont">
         <Link to={`/movie-info/${movie.id}`}>
-          {" "}
+          
           <img className="photoFilm" src={movie.imgUrl} alt="photoFilm" />{" "}
         </Link>
         <p className="yearOfProduction">{movie.yearOfProd}</p>
