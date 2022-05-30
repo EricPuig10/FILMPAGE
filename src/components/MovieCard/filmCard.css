@@ -50,11 +50,24 @@
   align-items: center;
 }
 
-.butFav {
+
+.butFav-unfav{
   color: white;
   background-color: transparent;
   border: none;
+  margin-right: 2%;
 }
+
+.butFav-fav{
+  color: rgb(255, 230, 0);
+  background-color: transparent;
+  border: none;
+  margin-right: 2%;
+}
+
+
+
+
 
 
 .deleteBtn {

@@ -5,7 +5,10 @@ import { useEffect } from "react";
 export const TrendingFilms = () => {
   const [movies, setMovies] = useState([]);
   const [current, setCurrent] = useState(0);
+
   const length = movies.length;
+
+
 
   useEffect(() => {
     getAllMovies();
@@ -32,17 +35,20 @@ export const TrendingFilms = () => {
 
   // console.log (current)
 
-  // const changeImg = (e) => {
-  //   setImgInit(newImg);
-  // };
-
   return (
     <div>
       <div className="trendingFilms">
         {movies.map((movie, index) => (
-          <div key={index} className={index === current ? "slide active" : "slide"}>
+          <div
+            key={index}
+            className={index === current ? "slide active" : "slide"}
+          >
             {index === current && (
-              <img id="imgTrendingFilm" alt="fotoTrending" src={movie.imgSlider} />
+              <img
+                id="imgTrendingFilm"
+                alt="fotoTrending"
+                src={movie.imgSlider}
+              />
             )}
           </div>
         ))}

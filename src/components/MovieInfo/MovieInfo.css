@@ -10,6 +10,16 @@
   margin-left: 12%;
 }
 
+.loaderZone{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+  margin-left: 0%;
+}
+
+
+
 .textCont {
   width: 50%;
   margin-left: 10%;

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { movieServices } from "../../services/movieServices";
 
 export const MovieCard = (props) => {
   const [isFav, setIsFav] = useState(false);
@@ -7,23 +8,39 @@ export const MovieCard = (props) => {
   const movie = props.movie;
 
   const showFav = () => {
-    if (isFav) setIsFav(false);
+    if (isFav) {
+      setIsFav(false)
+      movie.isFav=false
+    } 
     else setIsFav(true);
+    movie.isFav=true
     
+
   };
+
+
+  console.log(movie.isFav)
+  
+
 
 
   return (
     <div id={movie.id} className="filmCard">
       <div className="photoFilmCont">
-        <Link to={`/movie-info/${movie.id}`}> <img className="photoFilm" src={movie.imgUrl} alt="photoFilm" /> </Link>
+        <Link to={`/movie-info/${movie.id}`}>
+          {" "}
+          <img className="photoFilm" src={movie.imgUrl} alt="photoFilm" />{" "}
+        </Link>
         <p className="yearOfProduction">{movie.yearOfProd}</p>
       </div>
 
       <div className="infoFilm">
         <h2 className="titleFilm">{movie.title}</h2>
-        <button onClick={showFav} className="butFav">
-          <i className="fa-solid fa-star fa-lg"></i>
+        <button
+          onClick={() => showFav()}
+          className={`${!isFav ? "butFav-unfav" : "butFav-fav"}`}
+        >
+          <i className="fa-solid fa-star fa-lg">{movie.isFav}</i>
         </button>
         <button className="butEdit" onClick={() => props.editMovie(movie.id)}>
           <a className="butEdit" href="#root">

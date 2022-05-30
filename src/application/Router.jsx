@@ -5,7 +5,7 @@ import { InfoFilm } from "../pages/InfoFilm";
 import { LogIn } from "../pages/LogIn";
 
 export default function Router(props) {
-  let to = props.to;
+
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
