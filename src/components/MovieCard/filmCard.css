@@ -55,17 +55,8 @@
   background-color: transparent;
   border: none;
 }
-.butFav:active {
-  color: rgb(255, 242, 0);
-  background-color: transparent;
-  border: none;
-}
 
-.butFav:hover {
-  color: rgb(255, 242, 0);
-  background-color: transparent;
-  border: none;
-}
+
 .deleteBtn {
   color: white;
   background-color: transparent;

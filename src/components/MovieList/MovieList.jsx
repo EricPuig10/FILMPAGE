@@ -9,7 +9,7 @@ export const MovieList = () => {
   const [isShowForm, setIsShowForm] = useState(false);
   const [movieToEdit, setMovieToEdit] = useState({
     title: "",
-    id: "",
+    id: "", 
     imgUrl: "",
     yearOfProd: "",
     sinopsis: "",
@@ -109,7 +109,6 @@ export const MovieList = () => {
     <section>
       {isShowForm ? (
         <button type="button" onClick={showForm} className="addMovieTitle">
-          {" "}
           Back <i className="fa-solid fa-caret-up"></i>{" "}
         </button>
       ) : (
@@ -128,20 +127,19 @@ export const MovieList = () => {
         ""
       )}
       {isLoading ? (
-      
-      <Loader/>
-      
-      ) : (<div id="containerListFilms">
-      {movies.map((movie, key) => (
-        <MovieCard
-          key={key}
-          movie={movie}
-          deleteMovie={deleteMovie}
-          editMovie={editMovie}
-        />
-      
-      ))}
-    </div>)}
+        <Loader />
+      ) : (
+        <div id="containerListFilms">
+          {movies.map((movie, key) => (
+            <MovieCard
+              key={key}
+              movie={movie}
+              deleteMovie={deleteMovie}
+              editMovie={editMovie}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 };

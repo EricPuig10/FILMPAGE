@@ -1,11 +1,18 @@
 .trendingFilms {
   background-color: rgb(24, 23, 23);
   position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+
 }
 
-#imgTrendingFilm {
-  width: 100%;
+.trendingFilms img {
   box-shadow: 0 0 15px orange;
+  width:100vw;
+  height:50vh;
+
 }
 
 .butLeft {
@@ -32,4 +39,34 @@
 
 .butRight:hover {
   font-size: 1.2em;
+}
+
+.slide{
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active{
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.01);
+}
+
+@media only screen and (max-width:450px) {
+  .trendingFilms {
+    background-color: rgb(24, 23, 23);
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .trendingFilms img {
+    box-shadow: 0 0 15px orange;
+    width:100vw;
+    height: 15vh;
+  
+  }
+  
+  
 }
