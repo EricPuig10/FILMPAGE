@@ -16,6 +16,7 @@ export const MovieList = () => {
   });
   const [isEditMode, setIsEditMode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isPreview, setIsPreview] = useState(false);
 
   //canviem componentdidmount x useeffect
   useEffect(() => {
@@ -37,6 +38,7 @@ export const MovieList = () => {
   const showForm = () => {
     if (isShowForm) setIsShowForm(false);
     else setIsShowForm(true);
+    // setIsPreview(true)
     resetInputsForm();
     setIsEditMode(false);
   };
@@ -73,6 +75,7 @@ export const MovieList = () => {
 
   const editMovie = (id) => {
     showForm();
+    // setIsPreview(false)
     let movieToEdit = movies.find((movie) => movie.id === id);
     setMovieToEdit(movieToEdit);
     setIsEditMode(true);
@@ -105,6 +108,7 @@ export const MovieList = () => {
     });
   };
 
+
   return (
     <section>
       {isShowForm ? (
@@ -122,6 +126,8 @@ export const MovieList = () => {
           movieToEdit={movieToEdit}
           updateMovie={updateMovie}
           isEditMode={isEditMode}
+          isPreview={isPreview}
+          setIsPreview={setIsPreview}
         />
       ) : (
         ""

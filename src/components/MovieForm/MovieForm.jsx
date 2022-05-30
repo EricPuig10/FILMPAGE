@@ -1,8 +1,13 @@
-import { useState } from "react";
+import {  useState } from "react";
 
 export const MovieForm = (props) => {
   const [newMovie, setNewMovie] = useState(props.movieToEdit);
   const [isEditMode] = useState(props.isEditMode);
+  
+
+  // useEffect(() => {
+  //   showPreview();
+  // }, []);
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -23,16 +28,16 @@ export const MovieForm = (props) => {
   };
 
   const onInputChange = (e) => {
+    // props.setIsPreview(true)
+    console.log(newMovie.imgUrl.length)
     const name = e.target.name;
     const value = e.target.value;
     setNewMovie({ ...newMovie, [name]: value });
+    
   };
 
-  // const showPreview = () => {
-  //     if(newMovie.imgUrl.length > 0) setIsShowPreview({isShowPreview:true})
-  //     else setIsShowPreview({isShowPreview:false});
 
-  // };
+
 
   return (
     <div id="addNewFilm">
@@ -55,14 +60,14 @@ export const MovieForm = (props) => {
               type="text"
               placeholder="Title..."
             ></input>
-             <input
-                onChange={onInputChange}
-                value={newMovie.sinopsis}
-                name="sinopsis"
-                id="inputSinopsis"
-                type="text"
-                placeholder="Add sinopsis..."
-              ></input>
+            <input
+              onChange={onInputChange}
+              value={newMovie.sinopsis}
+              name="sinopsis"
+              id="inputSinopsis"
+              type="text"
+              placeholder="Add sinopsis..."
+            ></input>
             <div className="yearAndSubmitCont">
               <input
                 onChange={onInputChange}
@@ -84,10 +89,15 @@ export const MovieForm = (props) => {
               )}
             </div>
           </div>
-
-          <div className="preview">
-            <img src={newMovie.imgUrl} alt="preview" />
+          {props.isPreview ? (
+            <div className="preview">
+            
           </div>
+          ) : (
+            <div className="preview">
+              <img src={newMovie.imgUrl} alt="preview" />
+            </div>
+          )}
         </div>
       </form>
     </div>
