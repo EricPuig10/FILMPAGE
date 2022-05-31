@@ -39,4 +39,15 @@ export const movieServices = {
     });
     return movies;
   },
+
+  getSearch(data) {
+    const search = axios.get(`${baseURL}/movies`).then(res => {
+        return res.data.filter(movie => {
+            let cut = data.length;
+            return movie.name.slice(0, cut) === data;
+        })
+    })
+    return search;
+}
+
 };

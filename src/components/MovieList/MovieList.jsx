@@ -4,6 +4,7 @@ import { MovieCard } from "../MovieCard/MovieCard";
 import { MovieForm } from "../MovieForm/MovieForm";
 import Loader from "../Loader/Loader";
 import { TrendingFilms } from "../TrendingFilms/TrendingFilms";
+import { NavBar } from "../NavBar/NavBar";
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -33,8 +34,6 @@ export const MovieList = () => {
       setIsLoading(false);
     });
   };
-
-
 
   const showForm = () => {
     if (isShowForm) setIsShowForm(false);
@@ -108,52 +107,54 @@ export const MovieList = () => {
     });
   };
 
-
-
   const setFavorite = (newMovie) => {
-
     let movie = newMovie;
 
-    if(movie.isFav === false) movie.isFav = true 
+    if (movie.isFav === false) movie.isFav = true;
     else movie.isFav = false;
-    
-    movieServices.updateMovie(movie.id,movie).then( res => {
-        if(res) getAllMovies();
+
+    movieServices.updateMovie(movie.id, movie).then((res) => {
+      if (res) getAllMovies();
     });
 
     addToSlider(movie);
-};
+  };
 
-const addToSlider = (newMovie) => {
-
+  const addToSlider = (newMovie) => {
     let movie = newMovie;
 
-    if(movie.isFav === true){
-        favList.push(movie);
-        showFavList()
-        // alert(`${movie.title} added to favorites!`)
-    } else { 
-        let favIndex = favList.findIndex(movie => movie.id === newMovie.id)
-        favList.splice(favIndex,1);
-        showFavList()
-        // alert(`${movie.title} removed from favorites!`)
-    };
-    
+    if (movie.isFav === true) {
+      favList.push(movie);
+      showFavList();
+      // alert(`${movie.title} added to favorites!`)
+    } else {
+      let favIndex = favList.findIndex((movie) => movie.id === newMovie.id);
+      favList.splice(favIndex, 1);
+      showFavList();
+      // alert(`${movie.title} removed from favorites!`)
+    }
+
     showFavList();
-};
+  };
 
-const showFavList = () => {
-
-    movieServices.getFavMovies().then(res => {
-        setFavList(res);
-    })
-
-};
-
+  const showFavList = () => {
+    movieServices.getFavMovies().then((res) => {
+      setFavList(res);
+    });
+  };
 
   return (
     <section>
-      <TrendingFilms favList={favList}/>
+      <NavBar
+        // MovieForm={MovieForm}
+        // addNewMovie={addNewMovie}
+        // movieToEdit={movieToEdit}
+        // updateMovie={updateMovie}
+        // isEditMode={isEditMode}
+        // isShowForm={isShowForm}
+        // showForm={showForm}
+      />
+      <TrendingFilms favList={favList} />
       {isShowForm ? (
         <button type="button" onClick={showForm} className="addMovieTitle">
           Back <i className="fa-solid fa-caret-up"></i>{" "}
