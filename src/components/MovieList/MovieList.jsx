@@ -18,15 +18,12 @@ export const MovieList = () => {
   const [isEditMode, setIsEditMode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [favList, setFavList] = useState([]);
-
-
-  // const [isPreview, setIsPreview] = useState(false);
+  // const [isPreview, setIsPreview] = useState(true);
 
   //canviem componentdidmount x useeffect
   useEffect(() => {
     getAllMovies();
     showFavList();
-    // getFavMovies();
   }, []);
 
   const getAllMovies = () => {
@@ -37,16 +34,11 @@ export const MovieList = () => {
     });
   };
 
-  // const getFavMovies = () => {
-  //   movieServices.getFavMovies().then((res) => {
-  //     setFavMovies(res);
-  //   });
-  // };
+
 
   const showForm = () => {
     if (isShowForm) setIsShowForm(false);
     else setIsShowForm(true);
-    // setIsPreview(true)
     resetInputsForm();
     setIsEditMode(false);
   };
@@ -177,6 +169,7 @@ const showFavList = () => {
           movieToEdit={movieToEdit}
           updateMovie={updateMovie}
           isEditMode={isEditMode}
+          // isPreview={isPreview}
         />
       ) : (
         ""

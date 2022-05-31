@@ -1,13 +1,17 @@
-import {  useState } from "react";
+import { useState } from "react";
 
 export const MovieForm = (props) => {
   const [newMovie, setNewMovie] = useState(props.movieToEdit);
   const [isEditMode] = useState(props.isEditMode);
-  
+  // const [isPreview, setIsPreview] = useState(props.isPreview);
 
   // useEffect(() => {
-  //   showPreview();
+  //   cargarImagen();
   // }, []);
+
+  // const checkIsPreview = () => {
+  // !isPreview ? setIsPreview(true) : setIsPreview(false);
+  // };
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -23,7 +27,14 @@ export const MovieForm = (props) => {
 
   const resetInputsForm = (e) => {
     setNewMovie({
-      newMovie: { id: "", title: "", yearOfProd: "", imgUrl: "", sinopsis: "", isFav: false },
+      newMovie: {
+        id: "",
+        title: "",
+        yearOfProd: "",
+        imgUrl: "",
+        sinopsis: "",
+        isFav: false,
+      },
     });
   };
 
@@ -32,11 +43,7 @@ export const MovieForm = (props) => {
     const name = e.target.name;
     const value = e.target.value;
     setNewMovie({ ...newMovie, [name]: value });
-    
   };
-
-
-
 
   return (
     <div id="addNewFilm">
@@ -88,10 +95,9 @@ export const MovieForm = (props) => {
               )}
             </div>
           </div>
-            <div className="preview">
-              <img src={newMovie.imgUrl} alt="preview" />
-            </div>
-      
+          <div className="preview">
+            <img src={newMovie.imgUrl} alt="insert a valid img" />
+          </div>
         </div>
       </form>
     </div>

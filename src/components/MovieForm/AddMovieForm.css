@@ -120,6 +120,14 @@
   margin-left: 20%;
 }
 
+.butPreview{
+  position: absolute;
+  background-color: grey;
+  border-radius: 1vw;
+  left:10%;
+  top:-10%;
+}
+
 .preview {
   border-color: rgb(255, 166, 0);
   border-style: solid;
@@ -127,6 +135,7 @@
   margin-left: 0%;
   width: 15%;
   background-color: transparent;
+  position: relative;
 }
 
 .preview img {
