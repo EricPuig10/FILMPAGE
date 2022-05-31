@@ -1,46 +1,46 @@
 import { useState } from "react";
-import { movieServices } from "../../services/movieServices";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export const TrendingFilms = () => {
-  const [movies, setMovies] = useState([]);
+export const TrendingFilms = (props) => {
   const [current, setCurrent] = useState(0);
+  const [favList, setFavList] = useState(props.favList);
 
-  const length = movies.length;
+  const length = favList.length;
 
-
+  // useEffect(() => {
+  //   getAllMovies();
+  // }, []);
 
   useEffect(() => {
-    getAllMovies();
-  }, []);
+    setFavList(props.favList);
+  }, [props.favList]);
 
-  
+  useEffect(() => {
+    let milisecs = 3500;
+    let intervalChange = setInterval(nextSlide, milisecs);
+    return () => clearInterval(intervalChange);
+    // eslint-disable-next-line
+  }, [current]);
 
-  const getAllMovies = () => {
-    movieServices.getAllMovies().then((res) => {
-      setMovies(res);
+  // const getAllMovies = () => {
+  //   movieServices.getAllMovies().then((res) => {
+  //     setMovies(res);
 
-    });
-  };
+  //   });
+  // };
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
-    
-    
-    
-    
   };
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  
-
-
-
-  
+  const changeCurrent = (i) => {
+    setCurrent(i);
+}
 
   // if (!Array.isArray(movies) || movies.length <= 0) {
   //   return null;
@@ -51,18 +51,20 @@ export const TrendingFilms = () => {
   return (
     <div>
       <div className="trendingFilms">
-        {movies.map((movie, index) => (
+        {props.favList.map((movie, index) => (
           <div
             key={index}
             className={index === current ? "slide active" : "slide"}
           >
             {index === current && (
-              <Link to={`/movie-info/${movie.id}`}><img
-              id="imgTrendingFilm"
-              alt="fotoTrending"
-              src={movie.imgSlider}
-              // onChange={setInterval(nextSlide,5000)}
-            /></Link>
+              <Link to={`/movie-info/${movie.id}`}>
+                <img
+                  id="imgTrendingFilm"
+                  alt="fotoTrending"
+                  src={movie.imgSlider}
+                  // onChange={setInterval(nextSlide,5000)}
+                />
+              </Link>
             )}
           </div>
         ))}
@@ -72,6 +74,7 @@ export const TrendingFilms = () => {
         <button className="butRight" onClick={nextSlide}>
           <i className="fa-solid fa-angle-right fa-2xl   "></i>
         </button>
+        <div className="dots-container">{favList ? favList.map((movie, index) => <button key={index}  onClick={() => changeCurrent(index)} className='dot'><i className={index === current ? "fa-solid fa-circle selected-dot" : 'fa-solid fa-circle'}></i></button>) : null}</div>
       </div>
     </div>
   );

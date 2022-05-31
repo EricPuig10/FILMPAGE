@@ -23,13 +23,12 @@ export const MovieForm = (props) => {
 
   const resetInputsForm = (e) => {
     setNewMovie({
-      newMovie: { id: "", title: "", yearOfProd: "", imgUrl: "", sinopsis: "" },
+      newMovie: { id: "", title: "", yearOfProd: "", imgUrl: "", sinopsis: "", isFav: false },
     });
   };
 
   const onInputChange = (e) => {
     // props.setIsPreview(true)
-    console.log(newMovie.imgUrl.length)
     const name = e.target.name;
     const value = e.target.value;
     setNewMovie({ ...newMovie, [name]: value });
@@ -89,15 +88,10 @@ export const MovieForm = (props) => {
               )}
             </div>
           </div>
-          {props.isPreview ? (
-            <div className="preview">
-            
-          </div>
-          ) : (
             <div className="preview">
               <img src={newMovie.imgUrl} alt="preview" />
             </div>
-          )}
+      
         </div>
       </form>
     </div>

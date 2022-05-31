@@ -28,10 +28,15 @@ export const movieServices = {
     return movies;
   },
 
-  getMovieById (id) {
-    const movies = axios
-      .get (baseURL + "/movies/" + id)
-      .then ((res) => res.data);
+  getMovieById(id) {
+    const movies = axios.get(baseURL + "/movies/" + id).then((res) => res.data);
+    return movies;
+  },
+
+  getFavMovies() {
+    const movies = axios.get(baseURL + "/movies").then(res => {
+      return res.data.filter(newMovie => newMovie.isFav === true);
+    });
     return movies;
   },
 };

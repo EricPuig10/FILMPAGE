@@ -1,13 +1,13 @@
 
 import { MovieList } from "../components/MovieList/MovieList";
 import { NavBar } from "../components/NavBar/NavBar";
-import { TrendingFilms } from "../components/TrendingFilms/TrendingFilms";
+// import { TrendingFilms } from "../components/TrendingFilms/TrendingFilms";
 
 export const Home = () => {
   return (
     <div>
       <NavBar />
-      <TrendingFilms />
+      {/* <TrendingFilms /> */}
       <MovieList />
     </div>
   );
