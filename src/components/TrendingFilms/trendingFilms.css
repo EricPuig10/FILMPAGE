@@ -83,6 +83,22 @@
     height: 15vh;
   
   }
+  .dots-container{
+    display: flex;
+    position: absolute;
+    top: 80%;
+  }
+  
+  .dot{
+    background-color: transparent;
+    color:white;
+    border-style: none;
+    font-size: 0.6em;
+  }
+  
+  .selected-dot {
+    font-size: 1.2em;
+  }
   
   
 }
