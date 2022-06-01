@@ -137,6 +137,12 @@ export const MovieList = () => {
       setFavList(res);
     });
   };
+  
+
+  /*ssssssssssssssssssssssssssssssssssssssssssssssss/Intentar fer buscador/sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss*/
+
+
+
 
   return (
     <section>

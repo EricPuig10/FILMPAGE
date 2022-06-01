@@ -106,7 +106,7 @@ export const MovieForm = (props) => {
           </div>
           <div className="closeCont">
             <button onClick={() => props.showForm()} className="closeBtn">
-              <i class="fa-solid fa-xmark fa-xl"></i>
+              <i className="fa-solid fa-xmark fa-xl"></i>
             </button>
           </div>
         </div>

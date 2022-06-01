@@ -31,9 +31,9 @@ export const MovieCard = (props) => {
           <i className="fa-solid fa-star fa-lg">{movie.isFav}</i>
         </button>
         <button className="butEdit" onClick={() => props.editMovie(movie.id)}>
-          <button className="butEdit">
+          <i className="butEdit">
             <i className="fa-solid fa-pen-to-square fa-lg"></i>
-          </button>
+          </i>
         </button>
         <button
           onClick={() => props.deleteMovie(movie.id)}

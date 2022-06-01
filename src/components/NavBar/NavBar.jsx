@@ -1,9 +1,36 @@
 import { Link } from "react-router-dom";
 import React from "react";
-// import { movieServices } from "../../services/movieServices";
-// import { useState } from "react";
+import { movieServices } from "../../services/movieServices";
+import { useState } from "react";
 
-export const NavBar = () => {
+
+export const NavBar = (props) => {
+
+//   const [search, setSearch] = useState("")
+//   const [isSearchMode, setIsSearchMode] = useState(false)
+//   const [results, setResults] = useState("")
+
+//   const onSubmitHandler = (e) => {
+//     e.preventDefault();
+
+//   };
+
+//   const onInputChange = (e) => {
+
+//     // const name = e.target.name;
+//     // const value = e.target.value;
+//     let value = document.getElementsByClassName("searchFilm").value
+    
+//     setSearch(value);
+//     console.log(value);
+//     if (value !== '') movieServices.getSearch(value).then(res => {
+//         if (res) setResults(res)
+//     });
+//     else setResults ([]);
+// }
+
+
+
   return (
     <nav>
       <div className="navBar">
@@ -20,7 +47,10 @@ export const NavBar = () => {
         </div>
 
         <div className="inputCont">
-          <input className="searchFilm" placeholder="Search..." type="text" />
+          {/* <form onSubmit={onSubmitHandler} > */}
+          <input /*onChange={onInputChange()} value={search} name="search"*/ className="searchFilm" placeholder="Search..." type="text" />
+          {/* <button type="submit">Search</button> */}
+          {/* </form> */}
         </div>
 
         <div className="userZone">
