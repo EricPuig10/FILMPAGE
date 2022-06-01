@@ -5,6 +5,7 @@ import { MovieForm } from "../MovieForm/MovieForm";
 import Loader from "../Loader/Loader";
 import { TrendingFilms } from "../TrendingFilms/TrendingFilms";
 import { NavBar } from "../NavBar/NavBar";
+import { Modal } from "../Modal/Modal";
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -19,6 +20,7 @@ export const MovieList = () => {
   const [isEditMode, setIsEditMode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [favList, setFavList] = useState([]);
+  const [isOpen, setIsOpen] = useState(false)
   // const [isPreview, setIsPreview] = useState(true);
 
   //canviem componentdidmount x useeffect
@@ -146,15 +148,16 @@ export const MovieList = () => {
   return (
     <section>
       <NavBar
-        // MovieForm={MovieForm}
-        // addNewMovie={addNewMovie}
-        // movieToEdit={movieToEdit}
-        // updateMovie={updateMovie}
-        // isEditMode={isEditMode}
-        // isShowForm={isShowForm}
-        // showForm={showForm}
+      // MovieForm={MovieForm}
+      // addNewMovie={addNewMovie}
+      // movieToEdit={movieToEdit}
+      // updateMovie={updateMovie}
+      // isEditMode={isEditMode}
+      // isShowForm={isShowForm}
+      // showForm={showForm}
       />
       <TrendingFilms favList={favList} />
+
       {isShowForm ? (
         <button type="button" onClick={showForm} className="addMovieTitle">
           Back <i className="fa-solid fa-caret-up"></i>{" "}

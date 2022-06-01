@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+
+
 export const MovieForm = (props) => {
   const [newMovie, setNewMovie] = useState(props.movieToEdit);
   const [isEditMode] = useState(props.isEditMode);
@@ -46,6 +48,7 @@ export const MovieForm = (props) => {
   };
 
   return (
+    // <Modal>
     <div id="addNewFilm">
       <form onSubmit={onSubmitHandler}>
         <div className="formCont">
@@ -101,5 +104,6 @@ export const MovieForm = (props) => {
         </div>
       </form>
     </div>
+    // </Modal>
   );
 };

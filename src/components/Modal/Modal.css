@@ -1,0 +1,37 @@
+
+
+.btnModal{
+  border: none;
+  background-color: rgb(24, 23, 23);
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 1vw;
+  margin-top: 2%;
+}
+
+.btnModal:hover{
+    background-color: rgb(15, 14, 14);
+    border-style: solid;
+    border-color: orange;
+}
+
+.parentPrincipal{
+    display: flex;
+    justify-content: center;
+}
+
+.principal{
+align-items: center;
+display: flex;
+height:35vh;
+width:40vw;
+background-color: white;
+}
+.secundario{
+margin: 0 auto;
+}
