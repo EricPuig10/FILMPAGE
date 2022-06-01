@@ -1,19 +1,8 @@
-import { useState } from "react";
-
-
+import { useState, useEffect } from "react";
 
 export const MovieForm = (props) => {
   const [newMovie, setNewMovie] = useState(props.movieToEdit);
   const [isEditMode] = useState(props.isEditMode);
-  // const [isPreview, setIsPreview] = useState(props.isPreview);
-
-  // useEffect(() => {
-  //   cargarImagen();
-  // }, []);
-
-  // const checkIsPreview = () => {
-  // !isPreview ? setIsPreview(true) : setIsPreview(false);
-  // };
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -47,8 +36,22 @@ export const MovieForm = (props) => {
     setNewMovie({ ...newMovie, [name]: value });
   };
 
+  const closeOnEscapeKeyDown = (e) => {
+    if ((e.charCode || e.keyCode) === 27) {
+      props.showForm();
+    }
+  };
+
+  useEffect(() => {
+    document.body.addEventListener("keydown", closeOnEscapeKeyDown);
+    return function cleanup() {
+      document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
+    };
+  },
+  // eslint-disable-next-line
+  []);
+
   return (
-    // <Modal>
     <div id="addNewFilm">
       <form onSubmit={onSubmitHandler}>
         <div className="formCont">
@@ -101,9 +104,13 @@ export const MovieForm = (props) => {
           <div className="preview">
             <img src={newMovie.imgUrl} alt="insert a valid img" />
           </div>
+          <div className="closeCont">
+            <button onClick={() => props.showForm()} className="closeBtn">
+              <i class="fa-solid fa-xmark fa-xl"></i>
+            </button>
+          </div>
         </div>
       </form>
     </div>
-    // </Modal>
   );
 };

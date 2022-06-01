@@ -1,3 +1,10 @@
+#addNewFilm {
+  width: 100%;
+  height: 300vh;
+  position: absolute;
+  top: 0%;
+}
+
 .inputsCont {
   width: 70%;
   flex-direction: column;
@@ -64,17 +71,17 @@
   display: flex;
 }
 
-#inputSinopsis{
-    padding: 1%;
-    background-color: rgb(24, 23, 23);
-    padding: 1.5%;
-    border-radius: 1vw;
-    border-style: solid;
-    border-color: white;
-    font-size: 0.9em;
-    width: 60%;
-    color: white;
-    margin-bottom: 2%;
+#inputSinopsis {
+  padding: 1%;
+  background-color: rgb(24, 23, 23);
+  padding: 1.5%;
+  border-radius: 1vw;
+  border-style: solid;
+  border-color: white;
+  font-size: 0.9em;
+  width: 60%;
+  color: white;
+  margin-bottom: 2%;
 }
 
 #inputMovieYear {
@@ -111,7 +118,7 @@
 }
 
 .formCont {
-  width: 50%;
+  width: 60%;
   display: flex;
   border-style: solid;
   border-color: orange;
@@ -119,14 +126,10 @@
   border-radius: 2vw;
   justify-content: center;
   margin-left: 20%;
-}
-
-.butPreview{
-  position: absolute;
-  background-color: grey;
-  border-radius: 1vw;
-  left:10%;
-  top:-10%;
+  position: fixed;
+  top: 30%;
+  background-color: rgb(24, 23, 23);
+  z-index: 100;
 }
 
 .preview {
@@ -143,6 +146,31 @@
   width: 100%;
   height: 100%;
   border-radius: 2vw;
+}
+
+.closeCont {
+  position: relative;
+  width: 10%;
+}
+
+.closeBtn {
+  border: none;
+  background-color: rgb(24, 23, 23);
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-radius: 1.2vw;
+  position: absolute;
+  right: -25%;
+  top: -8%;
+}
+
+.closeBtn:hover {
+  color: orange;
 }
 
 @media only screen and (max-width: 450px) {
@@ -220,7 +248,7 @@
   #inputMovieTitle:hover {
     border-color: orange;
   }
-  #inputSinopsis{
+  #inputSinopsis {
     padding: 1%;
     background-color: rgb(24, 23, 23);
     padding: 1.5%;
@@ -231,7 +259,7 @@
     width: 60%;
     color: white;
     margin-bottom: 2%;
-}
+  }
 
   .yearAndSubmitCont {
     display: flex;
@@ -247,14 +275,14 @@
   }
 
   .formCont {
-    width: 50%;
+    width: 70%;
     display: flex;
     border-style: solid;
     border-color: orange;
     padding: 2%;
     border-radius: 2vw;
     justify-content: center;
-    margin-left: 23%;
+    margin-left: 13%;
   }
 
   .preview {
@@ -271,5 +299,21 @@
     width: 100%;
     height: 100%;
     border-radius: 2vw;
+  }
+
+  .closeBtn {
+    border: none;
+    background-color: rgb(24, 23, 23);
+    color: white;
+    font-weight: bold;
+    font-size: 0.6em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 1.2vw;
+    position: absolute;
+    right: -10%;
+    top: 0%;
   }
 }

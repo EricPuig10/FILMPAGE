@@ -11,7 +11,9 @@ export const MovieInfo = () => {
 
   useEffect(() => {
     getMovieById(id);
-  }, []);
+    
+  },// eslint-disable-next-line
+   []);
 
   const getMovieById = (id) => {
     setIsLoading(true);
@@ -26,7 +28,7 @@ export const MovieInfo = () => {
     <div>
       {isLoading ? (
         <div className="loaderZone">
-        <Loader />
+          <Loader />
         </div>
       ) : (
         <div className="filmInfoCont">

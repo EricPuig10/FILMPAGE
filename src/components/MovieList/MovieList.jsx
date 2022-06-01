@@ -5,7 +5,6 @@ import { MovieForm } from "../MovieForm/MovieForm";
 import Loader from "../Loader/Loader";
 import { TrendingFilms } from "../TrendingFilms/TrendingFilms";
 import { NavBar } from "../NavBar/NavBar";
-import { Modal } from "../Modal/Modal";
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -20,10 +19,7 @@ export const MovieList = () => {
   const [isEditMode, setIsEditMode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [favList, setFavList] = useState([]);
-  const [isOpen, setIsOpen] = useState(false)
-  // const [isPreview, setIsPreview] = useState(true);
 
-  //canviem componentdidmount x useeffect
   useEffect(() => {
     getAllMovies();
     showFavList();
@@ -76,7 +72,6 @@ export const MovieList = () => {
 
   const editMovie = (id) => {
     showForm();
-    // setIsPreview(false)
     let movieToEdit = movies.find((movie) => movie.id === id);
     setMovieToEdit(movieToEdit);
     setIsEditMode(true);
@@ -128,12 +123,10 @@ export const MovieList = () => {
     if (movie.isFav === true) {
       favList.push(movie);
       showFavList();
-      // alert(`${movie.title} added to favorites!`)
     } else {
       let favIndex = favList.findIndex((movie) => movie.id === newMovie.id);
       favList.splice(favIndex, 1);
       showFavList();
-      // alert(`${movie.title} removed from favorites!`)
     }
 
     showFavList();
@@ -147,37 +140,31 @@ export const MovieList = () => {
 
   return (
     <section>
-      <NavBar
-      // MovieForm={MovieForm}
-      // addNewMovie={addNewMovie}
-      // movieToEdit={movieToEdit}
-      // updateMovie={updateMovie}
-      // isEditMode={isEditMode}
-      // isShowForm={isShowForm}
-      // showForm={showForm}
-      />
+      <NavBar />
+
       <TrendingFilms favList={favList} />
 
       {isShowForm ? (
-        <button type="button" onClick={showForm} className="addMovieTitle">
-          Back <i className="fa-solid fa-caret-up"></i>{" "}
-        </button>
+        ""
       ) : (
         <button type="button" onClick={showForm} className="addMovieTitle">
           Add Movie <i className="fa-solid fa-caret-down"></i>
         </button>
       )}
+
       {isShowForm ? (
         <MovieForm
           addNewMovie={addNewMovie}
           movieToEdit={movieToEdit}
           updateMovie={updateMovie}
           isEditMode={isEditMode}
-          // isPreview={isPreview}
+          isShowForm={isShowForm}
+          showForm={showForm}
         />
       ) : (
         ""
       )}
+
       {isLoading ? (
         <Loader />
       ) : (

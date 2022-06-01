@@ -40,7 +40,7 @@ export const TrendingFilms = (props) => {
 
   const changeCurrent = (i) => {
     setCurrent(i);
-}
+  };
 
   // if (!Array.isArray(movies) || movies.length <= 0) {
   //   return null;
@@ -74,7 +74,25 @@ export const TrendingFilms = (props) => {
         <button className="butRight" onClick={nextSlide}>
           <i className="fa-solid fa-angle-right fa-2xl   "></i>
         </button>
-        <div className="dots-container">{favList ? favList.map((movie, index) => <button key={index}  onClick={() => changeCurrent(index)} className='dot'><i className={index === current ? "fa-solid fa-circle selected-dot" : 'fa-solid fa-circle'}></i></button>) : null}</div>
+        <div className="dots-container">
+          {favList
+            ? favList.map((movie, index) => (
+                <button
+                  key={index}
+                  onClick={() => changeCurrent(index)}
+                  className="dot"
+                >
+                  <i
+                    className={
+                      index === current
+                        ? "fa-solid fa-circle selected-dot"
+                        : "fa-solid fa-circle"
+                    }
+                  ></i>
+                </button>
+              ))
+            : null}
+        </div>
       </div>
     </div>
   );

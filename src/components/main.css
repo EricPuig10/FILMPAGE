@@ -5,7 +5,6 @@
 @import url(./LogIn.css);
 @import url(./MovieInfo/MovieInfo.css);
 @import url(./Loader/Loader.css);
-@import url(./Modal/Modal.css);
 
 body {
   margin: 0;

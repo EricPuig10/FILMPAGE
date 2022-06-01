@@ -1,6 +1,6 @@
-
 import { MovieList } from "../components/MovieList/MovieList";
-import { NavBar } from "../components/NavBar/NavBar";
+
+// import { NavBar } from "../components/NavBar/NavBar";
 // import { TrendingFilms } from "../components/TrendingFilms/TrendingFilms";
 
 export const Home = () => {
@@ -8,6 +8,7 @@ export const Home = () => {
     <div>
       {/* <NavBar /> */}
       {/* <TrendingFilms /> */}
+
       <MovieList />
     </div>
   );
