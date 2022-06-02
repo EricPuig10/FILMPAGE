@@ -40,7 +40,7 @@ export const LogIn = () => {
 
             <button className="buttonlogin" type="submit">Login</button>
             <label>
-              <input className="inputlogin" type="checkbox" name="remember" />{" "}
+              <input className="inputlogin" type="checkbox" name="remember" />
               Remember me
             </label>
           </div>

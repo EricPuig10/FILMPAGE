@@ -1,11 +1,6 @@
-/* Bordered form */
-/* form {
-  border: 3px solid #f1f1f1;
-} */
 
-.border{
-  margin-top: 5%;
-}
+
+
 label{
   color:white;
 }
@@ -34,7 +29,7 @@ label{
 /* Add a hover effect for buttons */
 .buttonlogin:hover {
   opacity: 0.8;
-} */
+} 
 
 /* Extra style for the cancel button (red) */
 #cancelbtn {
