@@ -23,13 +23,6 @@ export const TrendingFilms = (props) => {
     // eslint-disable-next-line
   }, [current]);
 
-  // const getAllMovies = () => {
-  //   movieServices.getAllMovies().then((res) => {
-  //     setMovies(res);
-
-  //   });
-  // };
-
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
@@ -42,15 +35,10 @@ export const TrendingFilms = (props) => {
     setCurrent(i);
   };
 
-  // if (!Array.isArray(movies) || movies.length <= 0) {
-  //   return null;
-  // }
-
-  // console.log (current)
-
   return (
     <div>
-      <div className="trendingFilms">
+      {length !== 0 ?
+      (<div className="trendingFilms">
         {props.favList.map((movie, index) => (
           <div
             key={index}
@@ -62,7 +50,6 @@ export const TrendingFilms = (props) => {
                   id="imgTrendingFilm"
                   alt="fotoTrending"
                   src={movie.imgSlider}
-                  // onChange={setInterval(nextSlide,5000)}
                 />
               </Link>
             )}
@@ -94,6 +81,7 @@ export const TrendingFilms = (props) => {
             : null}
         </div>
       </div>
+      ): (null)}
     </div>
   );
 };

@@ -159,7 +159,7 @@ export const MovieList = () => {
         ""
       ) : (
         <button type="button" onClick={showForm} className="addMovieTitle">
-         <i class="fa-solid fa-plus"></i>
+         <i className="fa-solid fa-plus"></i>
         </button>
       )}
 
