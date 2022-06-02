@@ -5,6 +5,7 @@ import { MovieForm } from "../MovieForm/MovieForm";
 import Loader from "../Loader/Loader";
 import { TrendingFilms } from "../TrendingFilms/TrendingFilms";
 import { NavBar } from "../NavBar/NavBar";
+import Loader2 from "../Loader2/Loader2";
 
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -137,8 +138,10 @@ export const MovieList = () => {
   };
 
   const showFavList = () => {
+    setIsLoading(true)
     movieServices.getFavMovies().then((res) => {
       setFavList(res);
+      setIsLoading(false)
     });
   };
 
@@ -148,7 +151,9 @@ export const MovieList = () => {
     <section>
       <NavBar />
 
-      <TrendingFilms favList={favList} />
+
+{isLoading ? (<Loader/>) : 
+      (<TrendingFilms favList={favList} isLoading={isLoading} />)}
 
       {isShowForm ? (
         ""
@@ -173,7 +178,7 @@ export const MovieList = () => {
       )}
 
       {isLoading ? (
-        <Loader />
+        <Loader2 />
       ) : (
         <div id="containerListFilms">
           {movies.map((movie, key) => (
