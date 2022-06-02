@@ -8,6 +8,9 @@
   padding: 2%;
   width: 70%;
   margin-left: 12%;
+  box-shadow: 0 0 15px orange;
+
+
 }
 
 .loaderZone {
@@ -26,10 +29,13 @@
 .imageCont {
   width: 50%;
   margin-left: 10%;
+  border-radius: 2vw;
 }
 
 .imageCont img {
   width: 70%;
+  border-radius: 2vw;
+  box-shadow: 0 0 15px orange;
 }
 
 h1 {
@@ -47,17 +53,17 @@ p {
 
 @media only screen and (max-width: 450px) {
   .filmInfoCont {
-    margin-top: 2%;
+    margin-top: 4%;
     border-style: solid;
     border-color: orange;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     border-radius: 2vw;
-    margin: 2%;
     padding: 2%;
     width: 70%;
     margin-left: 12%;
+
   }
   .loaderZone {
     display: flex;

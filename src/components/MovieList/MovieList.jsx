@@ -19,6 +19,7 @@ export const MovieList = () => {
   const [isEditMode, setIsEditMode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [favList, setFavList] = useState([]);
+  const [isPreview, setIsPreview] = useState(false)
 
   useEffect(() => {
     getAllMovies();
@@ -38,6 +39,8 @@ export const MovieList = () => {
     else setIsShowForm(true);
     resetInputsForm();
     setIsEditMode(false);
+    setIsPreview(false)
+
   };
 
   const addNewMovie = (data) => {
@@ -75,6 +78,7 @@ export const MovieList = () => {
     let movieToEdit = movies.find((movie) => movie.id === id);
     setMovieToEdit(movieToEdit);
     setIsEditMode(true);
+    setIsPreview(true)
   };
 
   const updateMovie = (newMovie) => {
@@ -137,13 +141,9 @@ export const MovieList = () => {
       setFavList(res);
     });
   };
+
+
   
-
-  /*ssssssssssssssssssssssssssssssssssssssssssssssss/Intentar fer buscador/sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss*/
-
-
-
-
   return (
     <section>
       <NavBar />
@@ -154,7 +154,7 @@ export const MovieList = () => {
         ""
       ) : (
         <button type="button" onClick={showForm} className="addMovieTitle">
-          Add Movie <i className="fa-solid fa-caret-down"></i>
+         <i class="fa-solid fa-plus"></i>
         </button>
       )}
 
@@ -166,6 +166,7 @@ export const MovieList = () => {
           isEditMode={isEditMode}
           isShowForm={isShowForm}
           showForm={showForm}
+          isPreview={isPreview}
         />
       ) : (
         ""

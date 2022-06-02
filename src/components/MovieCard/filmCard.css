@@ -34,11 +34,13 @@
   position: absolute;
   font-weight: bold;
   color: white;
-  background-color: black;
+  background-color: rgb(24, 23, 23);
   border-radius: 10%;
   padding: 1%;
-  top: 82%;
-  left: 2%;
+  top: 90%;
+  left: 42%;
+  border-color: black;
+  border-style: solid;
 }
 
 .infoFilm {
@@ -59,6 +61,7 @@
   background-color: transparent;
   border: none;
   margin-right: 2%;
+  cursor: pointer;
 }
 
 .butFav-fav {
@@ -66,6 +69,7 @@
   background-color: transparent;
   border: none;
   margin-right: 2%;
+  cursor: pointer;
 }
 
 .deleteBtn {
@@ -73,9 +77,10 @@
   background-color: transparent;
   border: none;
   margin-right: 2%;
+  cursor: pointer;
 }
 .deleteBtn:hover {
-  color: rgb(142, 0, 0);
+  color: rgb(253, 177, 0);
   background-color: transparent;
   border: none;
   margin-right: 2%;
@@ -84,6 +89,7 @@
   color: white;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .butEdit:hover {
   color: rgb(253, 177, 0);
