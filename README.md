@@ -28,9 +28,11 @@ Migrate class components to functional components.
 - React basics.
 
 ##  👁️‍🗨️ SCREENSHOT PREVIEW
-![image](https://user-images.githubusercontent.com/102654586/171178270-cebd0d53-9403-43e5-bd0c-2bd32c90eb3b.png)
-![image](https://user-images.githubusercontent.com/102654586/171178377-78db2d40-f23b-481e-91b8-f5e7dbd0d67e.png)
-![image](https://user-images.githubusercontent.com/102654586/171178640-c7786228-702f-47e6-8725-a6379995e6e9.png)
+![image](https://user-images.githubusercontent.com/102654586/171607257-3054e12e-4168-4ea2-9477-0de9ff6daf37.png)
+![image](https://user-images.githubusercontent.com/102654586/171607316-42b885c9-c346-44b7-b432-8d2b12d7527d.png)
+![image](https://user-images.githubusercontent.com/102654586/171607388-4509cbb9-c980-4c62-aef8-be31c621cd72.png)
+
+
 
 
 # Getting Started with Create React App
