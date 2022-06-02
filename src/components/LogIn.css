@@ -65,12 +65,16 @@ span.psw {
 }
 
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 450px) {
   span.psw {
     display: block;
     float: none;
   }
   #cancelbtn {
     width: 100%;
+  }
+  img.avatar {
+    width: 20%;
+    border-radius: 50%;
   }
 }
