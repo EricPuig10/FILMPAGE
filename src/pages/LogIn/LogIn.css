@@ -1,12 +1,10 @@
-
-
-
-label{
-  color:white;
+label {
+  color: white;
 }
 
 /* Full-width inputs */
-.inputlogin[type=text], input[type=password] {
+.inputlogin[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -29,7 +27,7 @@ label{
 /* Add a hover effect for buttons */
 .buttonlogin:hover {
   opacity: 0.8;
-} 
+}
 
 /* Extra style for the cancel button (red) */
 #cancelbtn {
@@ -45,14 +43,17 @@ label{
 }
 
 /* Avatar image */
-img.avatar {
-  width: 5%;
+.imgcontainer button {
+  font-size: 4em;
   border-radius: 50%;
+  color: white;
+  background-color: transparent;
+  border: none;
 }
 
 /* Add padding to containers */
 .container {
-  width:60%;
+  width: 60%;
   margin-left: 20%;
 }
 
@@ -73,8 +74,12 @@ span.psw {
   #cancelbtn {
     width: 100%;
   }
-  img.avatar {
-    width: 20%;
+  .imgcontainer button {
+    font-size: 4em;
     border-radius: 50%;
+    color: white;
+    background-color: transparent;
+    border: none;
   }
+  
 }

@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { InfoFilm } from "../pages/InfoFilm";
-import { LogIn } from "../pages/LogIn";
+import { LogIn } from "../pages/LogIn/LogIn";
+
 
 export default function Router(props) {
   return (

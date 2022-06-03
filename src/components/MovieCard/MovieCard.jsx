@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-
 export const MovieCard = (props) => {
   const [movie, setMovie] = useState(props.movie);
 

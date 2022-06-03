@@ -9,11 +9,12 @@ export const MovieInfo = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { id } = useParams();
 
-  useEffect(() => {
-    getMovieById(id);
-    
-  },// eslint-disable-next-line
-   []);
+  useEffect(
+    () => {
+      getMovieById(id);
+    }, // eslint-disable-next-line
+    []
+  );
 
   const getMovieById = (id) => {
     setIsLoading(true);

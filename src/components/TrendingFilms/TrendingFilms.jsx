@@ -37,51 +37,51 @@ export const TrendingFilms = (props) => {
 
   return (
     <div>
-      {length !== 0 ?
-      (<div className="trendingFilms">
-        {props.favList.map((movie, index) => (
-          <div
-            key={index}
-            className={index === current ? "slide active" : "slide"}
-          >
-            {index === current && (
-              <Link to={`/movie-info/${movie.id}`}>
-                <img
-                  id="imgTrendingFilm"
-                  alt="fotoTrending"
-                  src={movie.imgSlider}
-                />
-              </Link>
-            )}
+      {length !== 0 ? (
+        <div className="trendingFilms">
+          {props.favList.map((movie, index) => (
+            <div
+              key={index}
+              className={index === current ? "slide active" : "slide"}
+            >
+              {index === current && (
+                <Link to={`/movie-info/${movie.id}`}>
+                  <img
+                    id="imgTrendingFilm"
+                    alt="fotoTrending"
+                    src={movie.imgSlider}
+                  />
+                </Link>
+              )}
+            </div>
+          ))}
+          <button className="butLeft" onClick={prevSlide}>
+            <i className="fa-solid fa-angle-left fa-2xl"></i>
+          </button>
+          <button className="butRight" onClick={nextSlide}>
+            <i className="fa-solid fa-angle-right fa-2xl   "></i>
+          </button>
+          <div className="dots-container">
+            {favList
+              ? favList.map((movie, index) => (
+                  <button
+                    key={index}
+                    onClick={() => changeCurrent(index)}
+                    className="dot"
+                  >
+                    <i
+                      className={
+                        index === current
+                          ? "fa-solid fa-circle selected-dot"
+                          : "fa-solid fa-circle"
+                      }
+                    ></i>
+                  </button>
+                ))
+              : null}
           </div>
-        ))}
-        <button className="butLeft" onClick={prevSlide}>
-          <i className="fa-solid fa-angle-left fa-2xl"></i>
-        </button>
-        <button className="butRight" onClick={nextSlide}>
-          <i className="fa-solid fa-angle-right fa-2xl   "></i>
-        </button>
-        <div className="dots-container">
-          {favList
-            ? favList.map((movie, index) => (
-                <button
-                  key={index}
-                  onClick={() => changeCurrent(index)}
-                  className="dot"
-                >
-                  <i
-                    className={
-                      index === current
-                        ? "fa-solid fa-circle selected-dot"
-                        : "fa-solid fa-circle"
-                    }
-                  ></i>
-                </button>
-              ))
-            : null}
         </div>
-      </div>
-      ): (null)}
+      ) : null}
     </div>
   );
 };

@@ -2,7 +2,7 @@
 @import url(./NavBar/navBar.css);
 @import url(./TrendingFilms/trendingFilms.css);
 @import url(./MovieForm/AddMovieForm.css);
-@import url(./LogIn.css);
+@import url(../pages/LogIn/LogIn.css);
 @import url(./MovieInfo/MovieInfo.css);
 @import url(./Loader/Loader.css);
 @import url(./Loader2/Loader2.css);

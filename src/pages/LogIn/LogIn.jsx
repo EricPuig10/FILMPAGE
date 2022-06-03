@@ -1,4 +1,4 @@
-import { NavBar } from "../components/NavBar/NavBar";
+import { NavBar } from "../../components/NavBar/NavBar";
 import { Link } from "react-router-dom";
 
 export const LogIn = () => {
@@ -8,11 +8,7 @@ export const LogIn = () => {
       <div className="border">
         <form /*action="action_page.php" */ method="post">
           <div className="imgcontainer">
-            <img
-              src="https://reclamos.asep.gob.pa/solicitudes/Resources/user2.png"
-              alt="Avatar"
-              className="avatar"
-            />
+            <button href=""><i className="fa-solid fa-user"></i></button>
           </div>
 
           <div className="container">

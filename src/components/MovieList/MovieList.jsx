@@ -20,7 +20,7 @@ export const MovieList = () => {
   const [isEditMode, setIsEditMode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [favList, setFavList] = useState([]);
-  const [isPreview, setIsPreview] = useState(false)
+  const [isPreview, setIsPreview] = useState(false);
 
   useEffect(() => {
     getAllMovies();
@@ -40,8 +40,7 @@ export const MovieList = () => {
     else setIsShowForm(true);
     resetInputsForm();
     setIsEditMode(false);
-    setIsPreview(false)
-
+    setIsPreview(false);
   };
 
   const addNewMovie = (data) => {
@@ -79,7 +78,7 @@ export const MovieList = () => {
     let movieToEdit = movies.find((movie) => movie.id === id);
     setMovieToEdit(movieToEdit);
     setIsEditMode(true);
-    setIsPreview(true)
+    setIsPreview(true);
   };
 
   const updateMovie = (newMovie) => {
@@ -138,28 +137,28 @@ export const MovieList = () => {
   };
 
   const showFavList = () => {
-    setIsLoading(true)
+    setIsLoading(true);
     movieServices.getFavMovies().then((res) => {
       setFavList(res);
-      setIsLoading(false)
+      setIsLoading(false);
     });
   };
 
-
-  
   return (
     <section>
       <NavBar />
 
-
-{isLoading ? (<Loader/>) : 
-      (<TrendingFilms favList={favList} isLoading={isLoading} />)}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <TrendingFilms favList={favList} isLoading={isLoading} />
+      )}
 
       {isShowForm ? (
         ""
       ) : (
         <button type="button" onClick={showForm} className="addMovieTitle">
-         <i className="fa-solid fa-plus"></i>
+          <i className="fa-solid fa-plus"></i>
         </button>
       )}
 
