@@ -40,7 +40,7 @@ export const MovieInfo = () => {
           </div>
 
           <div className="imageCont">
-            <img src={movie.imgUrl} alt="filmfoto" />
+            <img className="imgFilm" src={movie.imgUrl} alt="filmfoto" />
           </div>
         </div>
       )}

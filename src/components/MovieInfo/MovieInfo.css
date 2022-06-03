@@ -36,6 +36,10 @@
   box-shadow: 0 0 15px orange;
 }
 
+.imageCont img:hover {
+  box-shadow: 0 0 30px orange;
+}
+
 h1 {
   color: white;
 }

@@ -65,7 +65,7 @@
   padding-top: 5%;
   padding-bottom: 5%;
   width: 100%;
-  border: 2px solid orange;
+  border: 3px solid orange;
 }
 
 .logInBut:hover {
@@ -89,6 +89,7 @@
     color: white;
     background-color: rgb(24, 23, 23);
   }
+
 
   .hub {
     color: orange;
