@@ -223,7 +223,7 @@
   #inputMovieUrl {
     padding: 1%;
     background-color: rgb(24, 23, 23);
-    padding: 1.5%;
+    padding: 3%;
     border-radius: 1vw;
     border-style: solid;
     border-color: white;
@@ -237,9 +237,8 @@
     border-color: orange;
   }
   #inputMovieTitle {
-    padding: 1%;
     background-color: rgb(24, 23, 23);
-    padding: 1.5%;
+    padding: 3%;
     border-radius: 1vw;
     border-style: solid;
     border-color: white;
@@ -253,9 +252,8 @@
     border-color: orange;
   }
   #inputSinopsis {
-    padding: 1%;
     background-color: rgb(24, 23, 23);
-    padding: 1.5%;
+    padding: 3%;
     border-radius: 1vw;
     border-style: solid;
     border-color: white;
@@ -273,7 +271,7 @@
     font-size: 0.9em;
     width: 30%;
     color: white;
-    margin-bottom: 2%;
+  
   }
 
   .yearAndSubmitCont {
@@ -290,14 +288,15 @@
   }
 
   .formCont {
-    width: 70%;
+    width: 90%;
+    height: 25%;
     display: flex;
     border-style: solid;
     border-color: orange;
     padding: 2%;
     border-radius: 2vw;
     justify-content: center;
-    margin-left: 13%;
+    margin-left: 2%;
   }
 
   .preview {
